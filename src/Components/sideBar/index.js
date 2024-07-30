@@ -1,7 +1,8 @@
 import React from 'react';
-import './Styles.scss'; 
-import { grinlogo } from '../../Assets/Icons'; 
-import { FaTimes } from 'react-icons/fa'; 
+import { Link } from 'react-router-dom';
+import './Styles.scss';
+import { grinlogo } from '../../Assets/Icons';
+import { FaTimes } from 'react-icons/fa';
 
 const Sidebar = ({ isOpen, onClose }) => {
   return (
@@ -15,18 +16,18 @@ const Sidebar = ({ isOpen, onClose }) => {
         </button>
       </div>
       <nav className="sidebar-nav">
-        <div className="nav-item" onClick={onClose}>
+        <Link to="/" className="nav-item" onClick={onClose}>
           Home
-        </div>
-        <div className="nav-item" onClick={onClose}>
+        </Link>
+        <Link to="/ride" className="nav-item" onClick={onClose}>
           Ride with us
-        </div>
-        <div className="nav-item" onClick={onClose}>
+        </Link>
+        <Link to="/drive" className="nav-item" onClick={onClose}>
           Drive with us
-        </div>
-        <div className="nav-item" onClick={onClose}>
+        </Link>
+        <Link to="/charge" className="nav-item" onClick={onClose}>
           Let's charge
-        </div>
+        </Link>
       </nav>
     </div>
   );
