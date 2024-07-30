@@ -1,10 +1,10 @@
 import React from 'react'
 import ComingSoon from '../../Components/ComingSoon'
 
-const Home = () => {
+const RideWithUs = () => {
   return (
     <div><ComingSoon/></div>
   )
 }
 
-export default Home
+export default RideWithUs
