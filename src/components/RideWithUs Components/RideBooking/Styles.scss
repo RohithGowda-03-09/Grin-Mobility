@@ -1,0 +1,492 @@
+.location-icon {
+    height: 377px;
+    width: 1439px;
+    position: absolute;
+    margin: 0 !important;
+    top: -111px;
+    left: -145px;
+    z-index: 1;
+  }
+  .frame-child5,
+  .location-details-child {
+    position: relative;
+    background-color: #fff;
+    display: none;
+    max-width: 100%;
+  }
+  .location-details-child {
+    width: 1163px;
+    height: 455px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+  }
+  .frame-child5 {
+    height: 65px;
+    width: 536.5px;
+    border-radius: 40px;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+  }
+  .iconamoonlocation-light {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    min-height: 40px;
+    z-index: 1;
+  }
+  .current-location1 {
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .current-location,
+  .location-input-control {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+  .current-location {
+    flex: 1;
+    flex-direction: column;
+    padding: 2px 0 0;
+  }
+  .location-input-control {
+    width: 271px;
+    flex-direction: row;
+    gap: 30px;
+  }
+  .change {
+    position: relative;
+    text-decoration: underline;
+    display: inline-block;
+    min-width: 65px;
+    z-index: 1;
+  }
+  .change-location,
+  .group-div {
+    display: flex;
+    align-items: flex-start;
+  }
+  .change-location {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 8px 0 0;
+    font-size: 16px;
+    color: #00ca00;
+  }
+  .group-div {
+    flex: 1;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 11px 30px 10px;
+    min-width: 348px;
+    max-width: 100%;
+    gap: 20px;
+    z-index: 3;
+  }
+  .uilenter-icon {
+    height: 40px;
+    width: 40px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: contain;
+    min-height: 40px;
+    z-index: 1;
+  }
+  .frame-input,
+  .location-controls,
+  .rectangle-parent2 {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box;
+  }
+  .frame-input {
+    width: 129px;
+    border: 0;
+    outline: 0;
+    background-color: transparent;
+    height: 38px;
+    flex-direction: column;
+    padding: 2px 0 0;
+    font-family: Poppins;
+    font-weight: 500;
+    font-size: 24px;
+    color: #474747;
+  }
+  .location-controls,
+  .rectangle-parent2 {
+    flex-direction: row;
+    max-width: 100%;
+  }
+  .rectangle-parent2 {
+    flex: 1;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #00ca00;
+    padding: 11px 30px 10px;
+    gap: 30px;
+    min-width: 348px;
+    z-index: 3;
+  }
+  .location-controls {
+    align-self: stretch;
+    flex-wrap: wrap;
+    padding: 0 0 16px;
+    gap: 36.5px;
+  }
+  .your-last-destinations {
+    position: relative;
+    font-weight: 600;
+    z-index: 3;
+  }
+  .destinations {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 2px 16px;
+  }
+  .location-address-child {
+    align-self: stretch;
+    height: 1px;
+    border-top: 1px solid #dedede;
+    box-sizing: border-box;
+  }
+  .cafe-de-paris-18th,
+  .location-address-child {
+    position: relative;
+    z-index: 3;
+  }
+  .cafe-de-paris-18th-cross-6th-wrapper,
+  .location-address {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .cafe-de-paris-18th-cross-6th-wrapper {
+    flex-direction: row;
+    padding: 0 2px;
+    box-sizing: border-box;
+    font-size: 20px;
+  }
+  .location-address {
+    align-self: stretch;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .frame-child7 {
+    height: 69px;
+    width: 321px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #fff;
+    border: 2px solid #00ca00;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .schedule-ride {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Inter;
+    color: #474747;
+    text-align: left;
+    z-index: 1;
+    margin: 5px;
+  }
+  .frame-child8,
+  .group-button {
+    border-radius: 10px;
+    max-width: 100%;
+  }
+  .group-button {
+    cursor: pointer;
+    border: 2px solid #00ca00;
+    padding: 15px 34px 14px;
+    background-color: #fff;
+    flex: 1;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    min-width: 209px;
+    min-height: 69px;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  .group-button:hover {
+    background-color: #e6e6e6;
+    border: 2px solid #1ae31a;
+    box-sizing: border-box;
+  }
+  .frame-child8 {
+    height: 69px;
+    width: 321px;
+    position: relative;
+    background-color: #00ca00;
+    display: none;
+  }
+  .book-ride {
+    text-decoration: none;
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Inter;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+    min-width: 116px;
+    z-index: 1;
+    margin: 5px;
+  }
+  .rectangle-parent3 {
+    cursor: pointer;
+    border: 0;
+    padding: 15px 34px 14px;
+    background-color: #00ca00;
+    flex: 1;
+    border-radius: 10px;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    min-width: 209px;
+    min-height: 69px;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  .rectangle-parent3:hover {
+    background-color: #1ae31a;
+  }
+  .booking,
+  .location-details,
+  .rectangle-parent3 {
+    display: flex;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .booking {
+    width: 657px;
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 15px;
+  }
+  .location-details {
+    flex: 1;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 30px;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-end;
+    padding: 30px 30px 30px 23px;
+    box-sizing: border-box;
+    gap: 60px;
+    z-index: 2;
+  }
+  .location-input-child {
+    height: 49px;
+    width: 49px;
+    position: absolute;
+    margin: 0 !important;
+    top: 38px;
+    right: 39px;
+    z-index: 4;
+  }
+  .location-input,
+  .location-input-wrapper {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .location-input {
+    width: 1163px;
+    justify-content: flex-start;
+    position: relative;
+  }
+  .location-input-wrapper {
+    align-self: stretch;
+    justify-content: center;
+    padding: 0 20px 0 35px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 24px;
+    color: #474747;
+    font-family: Poppins;
+  }
+  @media screen and (max-width: 1200px) {
+    .location-details {
+      gap: 30px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .group-div {
+      flex-wrap: wrap;
+    }
+    .group-div,
+    .rectangle-parent2 {
+      min-width: 100%;
+    }
+    .location-controls {
+      gap: 18px;
+    }
+    .group-button,
+    .rectangle-parent3 {
+      min-height: auto;
+    }
+    .booking {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .current-location1 {
+      font-size: 19px;
+    }
+    .rectangle-parent2 {
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+    .your-last-destinations {
+      font-size: 19px;
+    }
+    .cafe-de-paris-18th {
+      font-size: 16px;
+    }
+    .location-details {
+      padding-top: 20px;
+      padding-bottom: 20px;
+      box-sizing: border-box;
+    }
+  }
+ 
+  .modal {
+    position: fixed; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 700px;
+    width: 90%;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    z-index: 1000; 
+    font-family: 'Poppins', sans-serif; 
+  }
+  
+  .overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 999; 
+  }
+  
+  .modal-header {
+    text-align: center;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #e0e0e0; 
+    padding-bottom: 10px;
+  }
+  
+  .modal-title {
+    font-size: 1.5em;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #333;
+  }
+  
+  .map-container {
+    height: 400px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-footer {
+    text-align: center;
+  }
+  
+  .modal-confirm-btn, .modal-cancel-btn {
+    background-color: #00ca00; 
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 25px;
+    margin: 0 10px;
+    cursor: pointer;
+    font-weight: 700;
+    font-family: inherit;
+    font-size: 1em;
+    transition: background-color 0.3s;
+    min-width: 120px;
+  }
+  
+  .modal-cancel-btn {
+    background-color: #f44336; /* Red for cancel */
+  }
+  
+  .modal-confirm-btn:hover {
+    background-color: #007a00; 
+  }
+  
+  .modal-cancel-btn:hover {
+    background-color: #d32f2f; 
+  }
+  
+  
+  // .modal-footer button {
+  //   background-color: #4CAF50;
+  //   color: white;
+  //   padding: 10px 20px;
+  //   border: none;
+  //   border-radius: 5px;
+  //   cursor: pointer;
+  // }
+  
+  // .modal-footer button:hover {
+  //   background-color: #45a049;
+  // }
+  
+  // .change-location .change {
+  //   cursor: pointer;
+  //   color: blue;
+  //   text-decoration: underline;
+  // }
+  /* Add these styles to handle long text overflow with an indicator */
+.current-location1 {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 150px; /* Adjust the width as needed */
+  display: inline-block;
+  position: relative;
+}
+
+.current-location1::after {
+  content: '......'; /* Indicator for truncated text */
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: white; /* Ensure the background matches the element */
+  padding-left: 5px; /* Space between text and indicator */
+}
+
+
+.modal-body p {
+  font-size: 18px;
+  text-align: center;
+}

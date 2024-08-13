@@ -1,0 +1,321 @@
+.frame-child15 {
+    height: 65px;
+    width: 536.5px;
+    position: relative;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .from,
+  .select-your-airport {
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .from {
+    display: inline-block;
+    min-width: 74px;
+  }
+  .select-your-airport {
+    color: #474747;
+  }
+  .from-to {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+    max-width: 100%;
+  }
+  .iconamoonarrow-up-22 {
+    width: 32px;
+    height: 33px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    z-index: 2;
+  }
+  .location-controls-airport,
+  .rectangle-parent9 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1px 0 0;
+  }
+  .rectangle-parent9 {
+    flex: 1;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 13px 16px 12px 30px;
+    min-width: 348px;
+    max-width: 100%;
+    gap: 20px;
+  }
+  .frame-child16 {
+    width: 54px;
+    height: 54px;
+    position: relative;
+  }
+  .airport-locations-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+    padding: 0 0 5px;
+  }
+  .to {
+    position: relative;
+    font-weight: 500;
+    display: inline-block;
+    min-width: 41px;
+    z-index: 1;
+  }
+  .to-parent {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  .change1 {
+    position: relative;
+    text-decoration: underline;
+    display: inline-block;
+    min-width: 65px;
+    z-index: 1;
+  }
+  .change-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 6px 0 0;
+    font-size: 16px;
+  }
+  .airport-locations,
+  .rectangle-parent10 {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+  }
+  .rectangle-parent10 {
+    flex: 0.9713;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    align-items: flex-start;
+    justify-content: space-between;
+    padding: 13px 30px 12px;
+    min-width: 348px;
+    gap: 20px;
+  }
+  .airport-locations {
+    align-self: stretch;
+    align-items: flex-end;
+    justify-content: flex-start;
+    gap: 21.8px;
+  }
+  .frame-child18 {
+    height: 65px;
+    width: 1171px;
+    position: relative;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+    z-index: 0;
+  }
+  .enter-your-pnr,
+  .pnr {
+    font-weight: 500;
+    display: inline-block;
+  }
+  .pnr {
+    position: relative;
+    min-width: 67.3px;
+    z-index: 1;
+  }
+  .enter-your-pnr {
+    width: 236px;
+    border: 0;
+    outline: 0;
+    font-family: Poppins;
+    font-size: 24px;
+    background-color: transparent;
+    height: 36px;
+    position: absolute;
+    margin: 0 !important;
+    bottom: 14px;
+    left: 132px;
+    color: #474747;
+    text-align: left;
+    padding: 0;
+    z-index: 2;
+  }
+  .rectangle-parent11 {
+    align-self: stretch;
+    border-radius: 40px;
+    background-color: #fff;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 13px 34px 12px;
+    position: relative;
+    max-width: 100%;
+    z-index: 1;
+  }
+  .removebg-preview-1-icon {
+    width: 458px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+  }
+  .frame-child19 {
+    height: 69px;
+    width: 427px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #00ca00;
+    display: none;
+    max-width: 100%;
+  }
+  .book-ride1 {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Inter;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+    min-width: 116px;
+    z-index: 1;
+    margin: 5px;
+  }
+  .rectangle-parent12 {
+    cursor: pointer;
+    border: 0;
+    padding: 15px 34px 14px;
+    background-color: #00ca00;
+    align-self: stretch;
+    height: 69px;
+    border-radius: 10px;
+    flex-direction: row;
+    justify-content: flex-start;
+    box-sizing: border-box;
+    white-space: nowrap;
+    z-index: 1;
+  }
+  .rectangle-parent12:hover {
+    background-color: #1ae31a;
+  }
+  .book-ride-button,
+  .rectangle-parent12,
+  .remove-background {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .book-ride-button {
+    width: 427px;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 30px 0 0;
+    box-sizing: border-box;
+  }
+  .remove-background {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+  }
+  .pnr-details {
+    align-self: stretch;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .airport-details,
+  .airport-details-wrapper,
+  .pnr-details {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .airport-details {
+    width: 1171px;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 30px;
+  }
+  .airport-details-wrapper {
+    align-self: stretch;
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 20px 0 27px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 24px;
+    color: #00ca00;
+    font-family: Poppins;
+  }
+  @media screen and (max-width: 1050px) {
+    .rectangle-parent10,
+    .rectangle-parent9 {
+      flex: 1;
+    }
+    .airport-locations {
+      flex-wrap: wrap;
+    }
+    .removebg-preview-1-icon {
+      flex: 1;
+    }
+    .remove-background {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .rectangle-parent9 {
+      flex-wrap: wrap;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .from,
+    .select-your-airport {
+      font-size: 19px;
+    }
+    .from-to {
+      flex-wrap: wrap;
+    }
+    .rectangle-parent9 {
+      min-width: 100%;
+    }
+    .to {
+      font-size: 19px;
+    }
+    .to-parent {
+      flex-wrap: wrap;
+    }
+    .rectangle-parent10 {
+      flex-wrap: wrap;
+      min-width: 100%;
+    }
+    .enter-your-pnr,
+    .pnr {
+      font-size: 19px;
+    }
+  }
+  

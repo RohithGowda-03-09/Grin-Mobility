@@ -1,0 +1,317 @@
+
+.riding-experience {
+    margin: 0;
+  }
+  .riding-experience-like-container {
+    margin: 0;
+    width: 375px;
+    position: relative;
+    font-size: 40px;
+    font-weight: 700;
+    font-family: inherit;
+    color: #00ca00;
+    display: inline-block;
+    max-width: 100%;
+  }
+  .choose-between-these {
+    position: relative;
+    font-weight: 500;
+  }
+  .choose-title {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 0 0 7px;
+  }
+  .frame-child4 {
+    height: 73px;
+    width: 398px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .city-rides1 {
+    width: 120px;
+    border: 0;
+    outline: 0;
+    font-weight: 500;
+    font-family: Poppins;
+    font-size: 24px;
+    background-color: transparent;
+    height: 36px;
+    position: relative;
+    color: #474747;
+    text-align: left;
+    display: inline-block;
+    padding: 0;
+    z-index: 1;
+  }
+  .icround-arrow-back-icon1 {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: contain;
+    z-index: 1;
+  }
+  .ride-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 0;
+  }
+  .experience-list,
+  .rectangle-parent1,
+  .rides {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .rectangle-parent1 {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 17px 21px 16px 19px;
+    gap: 20px;
+  }
+  .experience-list,
+  .rides {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 15px;
+  }
+  .rides {
+    align-self: stretch;
+  }
+  .experience-list {
+    width: 398px;
+    min-width: 398px;
+  }
+  .mask-group-icon1 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 804px;
+    height: 428px;
+    object-fit: cover;
+  }
+  .vehicle-image-child {
+    position: absolute;
+    top: 339px;
+    left: 712px;
+    width: 139px;
+    height: 139px;
+    z-index: 1;
+  }
+  .vehicle-image {
+    align-self: stretch;
+    height: 478px;
+    position: relative;
+  }
+  .experience-types,
+  .vehicle {
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    max-width: 100%;
+  }
+  .vehicle {
+    flex: 1;
+    flex-direction: column;
+    padding: 14px 0 0;
+    box-sizing: border-box;
+    min-width: 553px;
+  }
+  .experience-types {
+    align-self: stretch;
+    flex-direction: row;
+    gap: 28px;
+  }
+  .pricing-items-child2 {
+    height: 103px;
+    width: 388px;
+    position: relative;
+    box-shadow: 0 10px 35.8px rgba(0, 202, 0, 0.16);
+    border-radius: 83.5px;
+    background-color: #f8f8f8;
+    border: 2px solid #00ca00;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+    z-index: 0;
+  }
+  .reiable-pricing1 {
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .pricing-items-child3 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin: 0 !important;
+    top: -25px;
+    left: 46px;
+    z-index: 1;
+  }
+  .pricing-items-child4,
+  .pricing-items3 {
+    position: relative;
+    box-shadow: 0 10px 35.8px rgba(0, 202, 0, 0.16);
+    border-radius: 83.5px;
+    background-color: #f8f8f8;
+    border: 2px solid #00ca00;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .pricing-items3 {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 31px 20px 30px;
+    min-width: 214px;
+    white-space: nowrap;
+  }
+  .pricing-items-child4 {
+    height: 103px;
+    width: 391px;
+    display: none;
+    z-index: 0;
+  }
+  .pricing-items-child5 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin: 0 !important;
+    bottom: -25px;
+    left: 48px;
+    z-index: 1;
+  }
+  .pricing-items4 {
+    flex: 1;
+    box-shadow: 0 10px 35.8px rgba(0, 202, 0, 0.16);
+    border-radius: 83.5px;
+    background-color: #f8f8f8;
+    border: 2px solid #00ca00;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 31px 20px 30px 23px;
+    position: relative;
+    min-width: 214px;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .pricing-items-child7 {
+    height: 50px;
+    width: 50px;
+    position: absolute;
+    margin: 0 !important;
+    top: -25px;
+    right: 49px;
+    z-index: 1;
+  }
+  .pricing-items5 {
+    flex: 1;
+    box-shadow: 0 10px 35.8px rgba(0, 202, 0, 0.16);
+    border-radius: 83.5px;
+    background-color: #f8f8f8;
+    border: 2px solid #00ca00;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 31px 20px 30px 21px;
+    position: relative;
+    min-width: 214px;
+    white-space: nowrap;
+    max-width: 100%;
+  }
+  .pricing-items-group {
+    width: 1230px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: 30px;
+    color: #00ca00;
+  }
+  .experience-options,
+  .experience-options-wrapper,
+  .pricing-items-group {
+    display: flex;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .experience-options {
+    flex: 1;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 42px;
+  }
+  .experience-options-wrapper {
+    width: 100%;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding: 0 350px;
+    box-sizing: border-box;
+    text-align: left;
+    font-size: 24px;
+    color: #474747;
+    font-family: Poppins;
+  }
+  @media screen and (max-width: 1200px) {
+    .experience-list {
+      flex: 1;
+    }
+    .experience-types {
+      flex-wrap: wrap;
+    }
+    .experience-options-wrapper {
+      padding-left: 31px;
+      padding-right: 31px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 1050px) {
+    .riding-experience-like-container {
+      font-size: 32px;
+    }
+  }
+  @media screen and (max-width: 750px) {
+    .experience-list,
+    .vehicle {
+      min-width: 100%;
+    }
+    .experience-options {
+      gap: 21px;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .riding-experience-like-container {
+      font-size: 24px;
+    }
+    .choose-between-these,
+    .city-rides1 {
+      font-size: 19px;
+    }
+    .rectangle-parent1 {
+      flex-wrap: wrap;
+    }
+  }
+  

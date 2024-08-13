@@ -1,0 +1,58 @@
+.frame-child3 {
+    height: 73px;
+    width: 398px;
+    position: relative;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    display: none;
+    max-width: 100%;
+  }
+  .rental-rides {
+    position: relative;
+    font-weight: 500;
+    z-index: 1;
+  }
+  .icround-arrow-back-icon {
+    width: 32px;
+    height: 32px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    object-fit: contain;
+    z-index: 1;
+  }
+  .icround-arrow-back-wrapper,
+  .rectangle-container {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 2px 0 0;
+  }
+  .rectangle-container {
+    align-self: stretch;
+    border-radius: 10px;
+    background-color: #f8f8f8;
+    border: 1px solid #00ca00;
+    box-sizing: border-box;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 17px 21px 16px 19px;
+    max-width: 100%;
+    gap: 20px;
+    text-align: left;
+    font-size: 24px;
+    color: #474747;
+    font-family: Poppins;
+  }
+  @media screen and (max-width: 450px) {
+    .rental-rides {
+      font-size: 19px;
+    }
+    .rectangle-container {
+      flex-wrap: wrap;
+    }
+  }
+  
