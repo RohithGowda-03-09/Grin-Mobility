@@ -1,0 +1,163 @@
+.partner-content-child {
+    height: 645px;
+    width: 1440px;
+    position: relative;
+    background: linear-gradient(101.18deg, #000 6.7%, rgba(102, 102, 102, 0));
+    display: none;
+    max-width: 100%;
+  }
+  .become-our-valued {
+    margin: 0;
+    width: 1169px;
+    position: relative;
+    font-size: inherit;
+    font-weight: 500;
+    font-family: inherit;
+    display: inline-block;
+    flex-shrink: 0;
+    max-width: 100%;
+    z-index: 2;
+  }
+  .partner-content {
+    align-self: stretch;
+    background: linear-gradient(101.18deg, #000 6.7%, rgba(102, 102, 102, 0));
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    padding: 60px 20px 60px 21px;
+    box-sizing: border-box;
+    min-height: 645px;
+    max-width: 100%;
+    z-index: 1;
+  }
+  .frame-child30,
+  .register-content-child {
+    position: relative;
+    display: none;
+    max-width: 100%;
+  }
+  .register-content-child {
+    width: 1169px;
+    height: 555px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20.5px;
+    background-color: #fff;
+  }
+  .frame-child30 {
+    height: 69px;
+    width: 470px;
+    border-radius: 10px;
+    background-color: #00ca00;
+  }
+  .register {
+    position: relative;
+    font-size: 24px;
+    font-weight: 600;
+    font-family: Inter;
+    color: #fff;
+    text-align: left;
+    display: inline-block;
+    min-width: 97px;
+    z-index: 1;
+  }
+  .rectangle-parent23,
+  .register-content-inner {
+    cursor: pointer;
+    border: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .rectangle-parent23 {
+    padding: 20px 93px;
+    background-color: #00ca00;
+    flex: 1;
+    border-radius: 10px;
+    justify-content: center;
+    z-index: 3;
+  }
+  .rectangle-parent23:hover {
+    background-color: #1ae31a;
+  }
+  .register-content-inner {
+    padding: 0 15px;
+    background-color: transparent;
+    width: 500px;
+    justify-content: flex-start;
+  }
+  .httpslottiefilescomanimat-icon {
+    width: 500px;
+    position: relative;
+    max-height: 100%;
+    object-fit: cover;
+    max-width: 100%;
+    z-index: 3;
+  }
+  .register-content {
+    width: 1169px;
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 20.5px;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 60px 20px 27px 21px;
+    box-sizing: border-box;
+    gap: 60px;
+    max-width: 100%;
+    z-index: 2;
+  }
+  .partner-content-parent,
+  .register-content-wrapper {
+    align-self: stretch;
+    display: flex;
+    align-items: flex-start;
+    box-sizing: border-box;
+    max-width: 100%;
+  }
+  .register-content-wrapper {
+    flex-direction: row;
+    justify-content: center;
+    padding: 0 21px 0 20px;
+    margin-top: -435px;
+  }
+  .partner-content-parent {
+    flex-direction: column;
+    justify-content: flex-start;
+    padding: 0 0 30px;
+    text-align: center;
+    font-size: 30px;
+    color: #fff;
+    font-family: Poppins;
+  }
+  @media screen and (max-width: 1000px) {
+    .become-our-valued {
+      font-size: 24px;
+    }
+  }
+  @media screen and (max-width: 725px) {
+    .register-content {
+      gap: 30px;
+      padding-top: 455px;
+      padding-bottom: 20px;
+      box-sizing: border-box;
+    }
+  }
+  @media screen and (max-width: 450px) {
+    .become-our-valued {
+      font-size: 18px;
+    }
+    .register {
+      font-size: 19px;
+    }
+    .rectangle-parent23 {
+      padding-left: 20px;
+      padding-right: 20px;
+      box-sizing: border-box;
+    }
+  }
+  

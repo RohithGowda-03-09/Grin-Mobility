@@ -1,0 +1,198 @@
+.join-the-grin {
+  align-self: stretch;
+  position: relative;
+  font-weight: 500;
+}
+.icon-labels-child {
+  height: 103px;
+  width: 103px;
+  position: relative;
+  border-radius: 83.5px;
+  background-color: #eee;
+  display: none;
+}
+.coin-icon {
+  height: 48px;
+  width: 48px;
+  position: relative;
+  overflow: hidden;
+  flex-shrink: 0;
+  z-index: 1;
+}
+.benefit-icons,
+.icon-labels {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.icon-labels {
+  width: 103px;
+  height: 103px;
+  border-radius: 83.5px;
+  background-color: #eee;
+  flex-direction: row;
+  padding: 28px 27px 27px 28px;
+  box-sizing: border-box;
+}
+.benefit-icons {
+  flex-direction: column;
+  gap: 30px;
+  min-width: 103px;
+}
+.weekly-payouts {
+  position: relative;
+}
+.payout-details,
+.payout-details-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.payout-details {
+  justify-content: flex-start;
+  gap: 97px;
+}
+.payout-details-wrapper {
+  justify-content: flex-end;
+  padding: 0 0 33px;
+  box-sizing: border-box;
+  min-width: 291px;
+}
+.benefit-icons-parent,
+.community-content {
+  display: flex;
+  justify-content: flex-start;
+  gap: 30px;
+  max-width: 100%;
+}
+.benefit-icons-parent {
+  flex-direction: row;
+  align-items: flex-end;
+  color: gray;
+}
+.community-content {
+  flex: 1;
+  flex-direction: column;
+  align-items: flex-start;
+  min-width: 419px;
+}
+.frame-child29,
+.image-3-icon {
+  position: relative;
+  display: none;
+  max-width: 100%;
+}
+.image-3-icon {
+  height: 534px;
+  width: 530px;
+  border-radius: 30px;
+  object-fit: cover;
+}
+.frame-child29 {
+  height: 69px;
+  width: 470px;
+  border-radius: 10px;
+  background-color: #00ca00;
+}
+.apply {
+  position: relative;
+  font-size: 24px;
+  font-weight: 600;
+  font-family: Inter;
+  color: #fff;
+  text-align: left;
+  display: inline-block;
+  min-width: 69px;
+  z-index: 1;
+}
+.rectangle-parent22 {
+  cursor: pointer;
+  border: 0;
+  padding: 20px 93px;
+  background-color: #00ca00;
+  flex: 1;
+  border-radius: 10px;
+  align-items: flex-start;
+  justify-content: center;
+  box-sizing: border-box;
+  z-index: 3;
+}
+.rectangle-parent22:hover {
+  background-color: #1ae31a;
+}
+.community-content-parent,
+.image-3-parent,
+.rectangle-parent22 {
+  display: flex;
+  flex-direction: row;
+  max-width: 100%;
+}
+.image-3-parent {
+  height: 534px;
+  width: 530px;
+  border-radius: 30px;
+  align-items: flex-end;
+  justify-content: flex-start;
+  padding: 30px;
+  box-sizing: border-box;
+  background-image: url(../../../Assets/Images/image-3@2x.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top;
+  min-width: 530px;
+}
+.community-content-parent {
+  align-self: stretch;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 55px;
+  text-align: left;
+  font-size: 24px;
+  color: #595959;
+  font-family: Poppins;
+}
+@media screen and (max-width: 1050px) {
+  .image-3-parent {
+    flex: 1;
+  }
+  .community-content-parent {
+    flex-wrap: wrap;
+  }
+}
+@media screen and (max-width: 725px) {
+  .community-content,
+  .image-3-parent {
+    min-width: 100%;
+  }
+  .community-content-parent {
+    gap: 27px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .join-the-grin {
+    font-size: 19px;
+  }
+  .benefit-icons {
+    flex: 1;
+  }
+  .weekly-payouts {
+    font-size: 19px;
+  }
+  .payout-details {
+    gap: 48px;
+  }
+  .payout-details-wrapper {
+    flex: 1;
+  }
+  .benefit-icons-parent {
+    flex-wrap: wrap;
+  }
+  .apply {
+    font-size: 19px;
+  }
+  .rectangle-parent22 {
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+}

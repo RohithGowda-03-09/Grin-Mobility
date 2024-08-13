@@ -1,0 +1,42 @@
+.layer-1 {
+    height: 105px;
+    width: 110px;
+    position: relative;
+    overflow: hidden;
+    flex-shrink: 0;
+    display: none;
+  }
+  .hourly-rental {
+    flex: 1;
+    justify-content: flex-start;
+    min-width: 277px;
+  }
+  .booking-content,
+  .booking-content-wrapper,
+  .hourly-rental {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    max-width: 100%;
+  }
+  .booking-content {
+    flex: 1;
+    justify-content: center;
+    gap: 30px;
+  }
+  .booking-content-wrapper {
+    align-self: stretch;
+    justify-content: flex-end;
+    padding: 0 30px;
+    box-sizing: border-box;
+    text-align: center;
+    font-size: 24px;
+    color: gray;
+    font-family: Poppins;
+  }
+  @media screen and (max-width: 1050px) {
+    .booking-content {
+      flex-wrap: wrap;
+    }
+  }
+  

@@ -1,0 +1,111 @@
+.why-title-child {
+  height: 111px;
+  width: 111px;
+  position: absolute;
+  margin: 0 !important;
+  top: 19px;
+  right: -36px;
+  border-radius: 50%;
+  background-color: #f0fff0;
+}
+.why-with-us {
+  margin: 0;
+}
+.why-with-us-whats-container {
+  margin: 0;
+  height: 150px;
+  position: relative;
+  font-size: inherit;
+  font-weight: 700;
+  font-family: inherit;
+  display: inline-block;
+  z-index: 1;
+}
+.benefits-sub-title,
+.why-title {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.why-title {
+  justify-content: flex-start;
+  position: relative;
+}
+.benefits-sub-title {
+  align-self: stretch;
+  justify-content: center;
+  padding: 0 21px 0 20px;
+  box-sizing: border-box;
+}
+.driver-quote-child,
+.driver-quote-item {
+  position: absolute;
+  margin: 0 !important;
+  border-radius: 50%;
+  background-color: #f0fff0;
+}
+.driver-quote-child {
+  height: 132px;
+  width: 132px;
+  top: -66px;
+  left: 61px;
+}
+.driver-quote-item {
+  height: 71px;
+  width: 71px;
+  right: 304px;
+  bottom: -27px;
+}
+.drive-with-grin-container {
+  position: relative;
+  letter-spacing: 0.16em;
+  font-weight: 500;
+  z-index: 1;
+}
+.driver-quote {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  position: relative;
+  font-size: 20px;
+  color: #0057ff;
+}
+.benefits-title,
+.benefits-title-wrapper {
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+}
+.benefits-title {
+  width: 1005px;
+  flex-direction: column;
+  justify-content: flex-start;
+  gap: 30px;
+}
+.benefits-title-wrapper {
+  align-self: stretch;
+  flex-direction: row;
+  justify-content: center;
+  padding: 0 20px 0 26px;
+  box-sizing: border-box;
+  text-align: center;
+  font-size: 50px;
+  color: #00ca00;
+  font-family: Poppins;
+}
+@media screen and (max-width: 1025px) {
+  .why-with-us-whats-container {
+    font-size: 40px;
+  }
+}
+@media screen and (max-width: 450px) {
+  .why-with-us-whats-container {
+    font-size: 30px;
+  }
+  .drive-with-grin-container {
+    font-size: 16px;
+  }
+}

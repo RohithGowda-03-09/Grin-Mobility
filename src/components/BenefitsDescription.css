@@ -1,0 +1,108 @@
+.benefits-description-child {
+  width: 390px;
+  height: 278px;
+  position: relative;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  background-color: #fff;
+  display: none;
+  max-width: 100%;
+}
+.benefit-one-child {
+  position: absolute;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  background-color: #00ca00;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+.uil0-plus-icon {
+  position: absolute;
+  top: 23px;
+  left: 26px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  z-index: 3;
+}
+.benefit-one {
+  height: 92px;
+  flex: 1;
+  position: relative;
+}
+.benefits-list,
+.benefits-list-wrapper {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.benefits-list {
+  flex: 1;
+  justify-content: flex-start;
+}
+.benefits-list-wrapper {
+  align-self: stretch;
+  justify-content: flex-end;
+  padding: 0 73px 0 74px;
+}
+.zero-investment1 {
+  position: relative;
+  font-weight: 600;
+  z-index: 2;
+}
+.zero-investment {
+  align-self: stretch;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: flex-start;
+  padding: 0 20px;
+}
+.we-take-care {
+  margin: 0;
+}
+.we-take-care-container {
+  position: relative;
+  font-size: 16px;
+  z-index: 2;
+}
+.benefits-description,
+.zero-investment-parent {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+.zero-investment-parent {
+  align-self: stretch;
+  align-items: flex-start;
+  gap: 15px;
+}
+.benefits-description {
+  flex: 1;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 30px;
+  background-color: #fff;
+  align-items: flex-end;
+  padding: 30px 76px 27px 75px;
+  box-sizing: border-box;
+  gap: 30px;
+  max-width: 100%;
+  z-index: 1;
+  text-align: left;
+  font-size: 24px;
+  color: #474747;
+  font-family: Poppins;
+}
+@media screen and (max-width: 450px) {
+  .zero-investment1 {
+    font-size: 19px;
+  }
+  .benefits-description {
+    gap: 15px;
+    padding-left: 20px;
+    padding-right: 20px;
+    box-sizing: border-box;
+  }
+}
