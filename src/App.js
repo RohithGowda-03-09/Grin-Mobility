@@ -14,14 +14,7 @@ const App = () => {
     <Router>
       <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY} libraries={["places"]}>
         <Routes>
-          <Route
-            path="/login"
-            element={
-              <Layout>
-                <LoginPage />
-              </Layout>
-            }
-          />
+        
           <Route
             path="/signup"
             element={

@@ -9,7 +9,7 @@ const SignupPage = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate('/login');
+    navigate('/');
   };
 
   const handleGoogleSignUp = async () => {

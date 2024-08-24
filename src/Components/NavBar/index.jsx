@@ -42,7 +42,7 @@ const NavBar = () => {
 
   const handleLogout = () => {
     localStorage.clear(); // Clear local storage
-    navigate('/login'); // Redirect to login page
+    navigate('/'); // Redirect to login page
     closeModal(); // Close the modal after logout
   };
 

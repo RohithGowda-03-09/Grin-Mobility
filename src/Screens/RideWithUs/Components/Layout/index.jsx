@@ -6,7 +6,7 @@ import Footer from "../../../../Components/Footer";
 
 const Layout = ({ children }) => {
   const location = useLocation();
-  const isAuthPage = location.pathname === "/login" || location.pathname === "/signup";
+  const isAuthPage = location.pathname === "/" || location.pathname === "/signup";
 
   return (
     <>
