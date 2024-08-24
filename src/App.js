@@ -12,10 +12,7 @@ import Layout from "./Screens/RideWithUs/Components/Layout";
 const App = () => {
   return (
     <Router>
-      <LoadScript
-        googleMapsApiKey="AIzaSyA_V4J1t09TrGyClkuYzvENZvJoba15i2c"
-        libraries={["places"]}
-      >
+      <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY} libraries={["places"]}>
         <Routes>
           <Route
             path="/login"
@@ -56,7 +53,7 @@ const App = () => {
                 <LoginPage />
               </Layout>
             }
-          />{" "}
+          />
         </Routes>
       </LoadScript>
     </Router>

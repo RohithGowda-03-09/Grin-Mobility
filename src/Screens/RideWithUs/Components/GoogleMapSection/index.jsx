@@ -12,8 +12,8 @@ function GoogleMapSection() {
   const containerStyle = {
     width: "100%",
     height: "100%",
-    borderRadius: "15px", // Added border radius
-    overflow: "hidden", // Ensures content stays within the border radius
+    borderRadius: "15px",
+    overflow: "hidden",
   };
 
   const [center, setCenter] = useState({
@@ -22,57 +22,10 @@ function GoogleMapSection() {
   });
   const [map, setMap] = useState(null);
   const [directionRoutePoint, setDirectionRoutePoint] = useState(null);
-  const [currentLocation, setCurrentLocation] = useState(null); // State to hold current location
+  const [currentLocation, setCurrentLocation] = useState(null);
 
   const { source } = useContext(SourceContext);
   const { destination } = useContext(DestinationContext);
-
-  useEffect(() => {
-    if (source && isValidLatLng(source) && map) {
-      map.panTo({
-        lat: source.lat,
-        lng: source.lng,
-      });
-      setCenter({
-        lat: source.lat,
-        lng: source.lng,
-      });
-    }
-    if (isValidLatLng(source) && isValidLatLng(destination)) {
-      directionRoute();
-    }
-  }, [source, map]);
-
-  useEffect(() => {
-    if (destination && isValidLatLng(destination) && map) {
-      setCenter({
-        lat: destination.lat,
-        lng: destination.lng,
-      });
-    }
-    if (isValidLatLng(source) && isValidLatLng(destination)) {
-      directionRoute();
-    }
-  }, [destination, map]);
-
-  useEffect(() => {
-    // Get current location when the component mounts
-    if (navigator.geolocation) {
-      navigator.geolocation.getCurrentPosition(
-        (position) => {
-          const { latitude, longitude } = position.coords;
-          setCurrentLocation({ lat: latitude, lng: longitude });
-          setCenter({ lat: latitude, lng: longitude });
-        },
-        (error) => console.error("Error getting location:", error),
-        {
-          enableHighAccuracy: true,
-          timeout: 5000,
-          maximumAge: 0,
-        }
-      );
-    }
-  }, []);
 
   const isValidLatLng = (coords) => {
     return (
@@ -80,7 +33,7 @@ function GoogleMapSection() {
     );
   };
 
-  const directionRoute = () => {
+  const directionRoute = useCallback(() => {
     if (
       !source ||
       !destination ||
@@ -105,7 +58,53 @@ function GoogleMapSection() {
         }
       }
     );
-  };
+  }, [source, destination]);
+
+  useEffect(() => {
+    if (source && isValidLatLng(source) && map) {
+      map.panTo({
+        lat: source.lat,
+        lng: source.lng,
+      });
+      setCenter({
+        lat: source.lat,
+        lng: source.lng,
+      });
+    }
+    if (isValidLatLng(source) && isValidLatLng(destination)) {
+      directionRoute();
+    }
+  }, [source, map, directionRoute, destination]);
+
+  useEffect(() => {
+    if (destination && isValidLatLng(destination) && map) {
+      setCenter({
+        lat: destination.lat,
+        lng: destination.lng,
+      });
+    }
+    if (isValidLatLng(source) && isValidLatLng(destination)) {
+      directionRoute();
+    }
+  }, [destination, map, directionRoute, source]);
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+          setCurrentLocation({ lat: latitude, lng: longitude });
+          setCenter({ lat: latitude, lng: longitude });
+        },
+        (error) => console.error("Error getting location:", error),
+        {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0,
+        }
+      );
+    }
+  }, []);
 
   const onLoad = useCallback(function callback(map) {
     setMap(map);

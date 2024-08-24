@@ -54,7 +54,7 @@ const Footer = () => {
           </div>
 
           <div className="footer-column">
-            <h4 className="footer-title">Contacts us</h4>
+            <h4 className="footer-title">Contact us</h4>
             <ul>
               <li>Email: contact@grinmobility.com</li>
               <li>Phone: (414) 687 - 5892</li>
@@ -66,7 +66,7 @@ const Footer = () => {
 
       <div className="footer-bottom">
         <p>&copy; Copyright @ grinmobility</p>
-        <p>All Rights Reserved | <a href="#">Terms and Conditions</a> | <a href="#">Privacy Policy</a></p>
+        <p>All Rights Reserved | <a href="/terms">Terms and Conditions</a> | <a href="/privacy">Privacy Policy</a></p>
       </div>
     </footer>
   );
