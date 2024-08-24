@@ -7,46 +7,48 @@ import { sourceIcon, whereToIcon } from "../../../../Assets/Icons";
 function InputItem({ type }) {
   const [value, setValue] = useState(null);
   const [placeholder, setPlaceholder] = useState(null);
-  const { source, setSource } = useContext(SourceContext);
-  const { destination, setDestination } = useContext(DestinationContext);
+  const { setSource } = useContext(SourceContext);
+  const { setDestination } = useContext(DestinationContext);
 
-  const handleSelect = useCallback((place) => {
-    if (!place || !place.value) {
-      setValue(null);
-      return;
-    }
-  
-    const placeId = place.value.place_id;
-    const service = new window.google.maps.places.PlacesService(
-      document.createElement("div")
-    );
-  
-    service.getDetails({ placeId }, (place, status) => {
-      if (
-        status === window.google.maps.places.PlacesServiceStatus.OK &&
-        place.geometry &&
-        place.geometry.location
-      ) {
-        const latLng = {
-          lat: place.geometry.location.lat(),
-          lng: place.geometry.location.lng(),
-          name: place.formatted_address,
-          label: place.name,
-        };
-  
-        if (type === "source") {
-          setSource(latLng);
-        } else {
-          setDestination(latLng);
-        }
-      } else {
-        console.error("Failed to get place details:", status);
+  const handleSelect = useCallback(
+    (place) => {
+      if (!place || !place.value) {
+        setValue(null);
+        return;
       }
-    });
-  
-    setValue(place);
-  }, [setSource, setDestination, type]);
-  
+
+      const placeId = place.value.place_id;
+      const service = new window.google.maps.places.PlacesService(
+        document.createElement("div")
+      );
+
+      service.getDetails({ placeId }, (place, status) => {
+        if (
+          status === window.google.maps.places.PlacesServiceStatus.OK &&
+          place.geometry &&
+          place.geometry.location
+        ) {
+          const latLng = {
+            lat: place.geometry.location.lat(),
+            lng: place.geometry.location.lng(),
+            name: place.formatted_address,
+            label: place.name,
+          };
+
+          if (type === "source") {
+            setSource(latLng);
+          } else {
+            setDestination(latLng);
+          }
+        } else {
+          console.error("Failed to get place details:", status);
+        }
+      });
+
+      setValue(place);
+    },
+    [setSource, setDestination, type]
+  );
 
   useEffect(() => {
     setPlaceholder(type === "source" ? "Pickup Location" : "Dropoff Location");
@@ -72,8 +74,8 @@ function InputItem({ type }) {
               border: "2px solid #00CA00",
               borderRadius: "9999px",
               boxShadow: "none",
-              width: "400px", 
-              height:"65px"
+              width: "400px",
+              height: "65px",
             }),
             input: (provided) => ({
               ...provided,
