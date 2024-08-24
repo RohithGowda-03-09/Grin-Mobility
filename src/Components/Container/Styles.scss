@@ -1,0 +1,100 @@
+$primary-color: #00ca00;
+$white-color: #ffffff;
+$border-color: #e0e0e0;
+$shadow-color: rgba(0, 0, 0, 0.2);
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: $white-color;
+
+  .auth-box {
+    background-color: $white-color;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px $shadow-color;
+    width: 100%;
+    max-width: 420px;
+    border: 1px solid $border-color;
+
+    h2 {
+      color: $primary-color;
+      text-align: center;
+      margin-bottom: 2rem;
+      font-size: 2rem;
+      font-weight: 700;
+    }
+
+    .input-group {
+      margin-bottom: 1.5rem;
+
+      label {
+        display: block;
+        margin-bottom: 0.75rem;
+        color: $primary-color;
+        font-weight: 500;
+        font-size: 1rem;
+      }
+
+      input {
+        width: 100%;
+        padding: 0.75rem;
+        border: 1px solid $border-color;
+        border-radius: 6px;
+        font-size: 1rem;
+        outline: none;
+        transition: border-color 0.3s, box-shadow 0.3s;
+
+        &:focus {
+          border-color: $primary-color;
+          box-shadow: 0 0 0 3px rgba($primary-color, 0.2);
+        }
+      }
+    }
+
+    .auth-button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: $primary-color;
+      color: $white-color;
+      border: none;
+      border-radius: 6px;
+      font-size: 1.125rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: background-color 0.3s, transform 0.3s;
+
+      &:hover {
+        background-color: darken($primary-color, 10%);
+        transform: scale(1.02);
+      }
+
+      &:active {
+        transform: scale(0.98);
+      }
+    }
+
+    .auth-toggle {
+      margin-top: 1.5rem;
+      text-align: center;
+
+      p {
+        margin: 0;
+        font-size: 0.875rem;
+        color: #555;
+      }
+
+      a {
+        color: $primary-color;
+        text-decoration: none;
+        font-weight: 600;
+
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,155 @@
+// Import a modern font
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+body {
+  font-family: 'Roboto', sans-serif;
+}
+
+.auth-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f2f5;
+  background-image: url('../../Assets/Icons/bg-image.jpg');
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+}
+
+.auth-box {
+  width: 100%;
+  max-width: 420px;
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-title {
+  font-size: 28px;
+  margin-bottom: 24px;
+  text-align: center;
+  color: #333;
+}
+
+.auth-form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.auth-form .form-group {
+  width: 100%;
+  margin-bottom: 18px;
+  display: flex;
+  justify-content: center;
+}
+
+.auth-input {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  font-size: 16px;
+}
+
+.auth-button {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  background-color: #00ca00;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+}
+
+.auth-button:hover {
+  background-color: #0056b3;
+}
+
+.auth-footer {
+  text-align: center;
+  margin-top: 24px;
+}
+
+.auth-footer p {
+  margin-bottom: 12px;
+  font-size: 16px;
+}
+
+.auth-google-button {
+  width: 100%;
+  max-width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background-color: #db4437;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 12px;
+  &:hover {
+    background-color: #357ae8;
+  }
+
+  svg {
+    font-size: 20px; 
+    margin: -4px;
+
+  }
+}
+
+.auth-google-button:hover {
+  background-color: #c1351d;
+}
+
+.auth-link-button {
+  background: none;
+  border: none;
+  color: #00ca00;
+  cursor: pointer;
+  font-size: 16px;
+  padding: 0;
+  text-decoration: underline;
+  transition: color 0.3s ease;
+}
+
+.auth-link-button:hover {
+  color: #0056b3;
+}
+
+@media (max-width: 768px) {
+  .auth-box {
+    padding: 20px;
+  }
+
+  .auth-title {
+    font-size: 24px;
+  }
+}
+
+@media (max-width: 480px) {
+  .auth-box {
+    padding: 15px;
+  }
+
+  .auth-title {
+    font-size: 20px;
+  }
+
+  .auth-button, .auth-google-button {
+    font-size: 16px;
+  }
+}

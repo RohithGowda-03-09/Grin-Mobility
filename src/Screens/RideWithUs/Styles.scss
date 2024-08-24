@@ -1,491 +1,192 @@
-.desktop-3-child {
-    width: 100%;
-    height: 215px;
-    position: absolute;
-    margin: 0 !important;
-    right: 0;
-    bottom: 1309px;
-    left: 0;
-    background-color: #e6fae6;
-  }
-  .city-rides {
-    margin: 0;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-  }
-  .zero-emission-rides {
-    position: relative;
-    font-size: 24px;
-    font-weight: 500;
-    color: #474747;
-    text-align: left;
-  }
-  .ride-details,
-  .ride-info {
+// Variables
+$primary-color: #00FF00; // Replace with the green shade from your design
+$border-color: #A4D4FF; // Light blue border color for ride cards
+$background-color: #F5F9FF; // Light grayish-blue background color for ride cards
+$text-color: #333; // Darker text color
+$font-poppins-bold: 'Poppins';
+
+// Main container
+.ride-with-us {
+  padding: 90px 80px; // Adjusted padding for better alignment
+
+  // Riding Experience Section
+  .riding-experience {
     display: flex;
-    align-items: flex-start;
-    max-width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px; // Reduced gap to optimize space
+
+    .content {
+      flex: 1;
+      max-width: 40%; // Adjusted width for better balance
+
+      h1 {
+        font-family: 'Poppins', sans-serif;
+        font-size: 40px;
+        font-weight: 700;
+        line-height: 1.2;
+        color: #00CA00;
+        margin: 0;
+      }
+
+      p {
+        font-family: 'Poppins', sans-serif;
+        font-size: 24px;
+        font-weight: 500;
+        margin: 20px 0;
+        color: #00CA00;
+      }
+
+      .ride-options {
+        display: flex;
+        flex-direction: column;
+        gap: 10px; // Reduced gap between ride cards
+
+        .ride-card {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          padding: 10px 16px; // Slightly smaller padding for smaller cards
+          border: 2px solid #00CA00;
+          border-radius: 8px;
+          cursor: pointer;
+          transition: background-color 0.3s ease;
+          max-width: 450px; // Reduced width for optimal space utilization
+
+          span {
+            font-size: 18px; // Slightly smaller font size
+            font-weight: 600;
+            color: #00CA00;
+          }
+
+          .arrow {
+            font-size: 20px; // Slightly smaller arrow
+            font-weight: bold;
+            color: #00CA00;
+          }
+
+          &:hover {
+            background-color: #00CA00;
+
+            span, .arrow {
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
+
+    .image-container {
+      flex: 1;
+      max-width: 70%; // Adjusted width for alignment
+      height: 100%;
+      border-radius: 8px;
+
+      img {
+        width: 100%;
+        height: auto;
+        border-radius: 8px;
+      }
+    }
   }
-  .ride-info {
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 15px;
-  }
-  .ride-details {
-    width: 864px;
-    flex-direction: row;
-    justify-content: center;
-    padding: 0 20px;
-    box-sizing: border-box;
-  }
-  .airport-rides {
-    margin: 0;
-    position: relative;
-    font-size: inherit;
-    font-weight: 700;
-    font-family: inherit;
-    display: inline-block;
-    max-width: 100%;
-  }
-  .divider,
-  .divider1,
-  .ride-details1 {
-    box-sizing: border-box;
-    max-width: 100%;
-  }
-  .ride-details1 {
-    width: 822px;
+
+  // Oval Cards Section
+  .oval-cards {
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: center;
-    padding: 0 20px;
-  }
-  .divider,
-  .divider1 {
-    align-self: stretch;
-  }
-  .divider1 {
-    flex: 1;
-    position: relative;
-    border-top: 1px solid #eff0f7;
-  }
-  .divider {
-    height: 7px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 0 6px;
-  }
-  .ev12-icon {
-    height: 92px;
-    flex: 1;
-    position: relative;
-    max-width: 100%;
-    overflow: hidden;
-    object-fit: cover;
-  }
-  .footer-column-left {
-    width: 172px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 0 1px;
-    box-sizing: border-box;
-  }
-  .drive-your-dream {
-    margin: 0;
-  }
-  .copyright {
-    align-self: stretch;
-    position: relative;
-    line-height: 30px;
-  }
-  .social-media-icon {
-    position: absolute;
-    height: 189.47%;
-    width: 327.27%;
-    top: -45.26%;
-    right: -116.36%;
-    bottom: -44.21%;
-    left: -110.91%;
-    border-radius: 8px;
-    background-color: #f2f1ff;
-    display: none;
-  }
-  .facebook-icon {
-    position: absolute;
-    height: 94.74%;
-    width: 89.09%;
-    top: 2.11%;
-    right: 2.73%;
-    bottom: 3.16%;
-    left: 8.18%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-  }
-  .social-media-icon-squarefaceb {
-    height: 19px;
-    width: 11px;
-    position: relative;
-  }
-  .social-media-icon1 {
-    position: absolute;
-    height: 240%;
-    width: 189.47%;
-    top: -70.67%;
-    right: -46.32%;
-    bottom: -69.33%;
-    left: -43.16%;
-    border-radius: 8px;
-    background-color: #f2f1ff;
-    display: none;
-  }
-  .twitter-icon {
-    position: absolute;
-    height: 97.33%;
-    width: 94.74%;
-    top: 0.67%;
-    right: 1.05%;
-    bottom: 2%;
-    left: 4.21%;
-    max-width: 100%;
-    overflow: hidden;
-    max-height: 100%;
-  }
-  .social-media-icon-squaretwitt {
-    width: 19px;
-    height: 15px;
-    position: relative;
-  }
-  .twitter-you-tube {
-    width: 19px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-    padding: 2px 0 0;
-    box-sizing: border-box;
-  }
-  .social-media-icon-squareinsta {
-    height: 19px;
-    width: 19px;
-    position: relative;
-    object-fit: cover;
-    min-height: 19px;
-  }
-  .social-media-icon2 {
-    position: absolute;
-    top: -8.6px;
-    left: -8.2px;
-    border-radius: 8px;
-    background-color: #f2f1ff;
-    width: 36px;
-    height: 36px;
-    display: none;
-  }
-  .linkedin-icon {
-    position: absolute;
-    top: 0.8px;
-    left: 0.8px;
-    width: 18px;
-    height: 17.1px;
-  }
-  .social-media-icon-squarelinke {
-    height: 18px;
-    width: 19px;
-    position: relative;
-  }
-  .social-media-icon3 {
-    position: absolute;
-    top: -10.6px;
-    left: -7.2px;
-    border-radius: 8px;
-    background-color: #f2f1ff;
-    width: 36px;
-    height: 36px;
-    display: none;
-  }
-  .youtube-icon {
-    position: absolute;
-    top: 0.4px;
-    left: 0.9px;
-    width: 19.8px;
-    height: 14px;
-  }
-  .social-media-icon-squareyoutu {
-    width: 21px;
-    height: 15px;
-    position: relative;
-  }
-  .twitter-you-tube1 {
-    width: 21px;
-    flex-direction: column;
-    padding: 2px 0 0;
-    box-sizing: border-box;
-  }
-  .copyright-social,
-  .footer-columns,
-  .social-icons,
-  .twitter-you-tube1 {
-    display: flex;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .social-icons {
-    flex-direction: row;
-    gap: 22px;
-  }
-  .copyright-social,
-  .footer-columns {
-    flex-direction: column;
-  }
-  .copyright-social {
-    align-self: stretch;
-    gap: 24px;
-  }
-  .footer-columns {
-    width: 310.4px;
-    gap: 17px;
-  }
-  .footer-links,
-  .footer-links1 {
-    display: flex;
-    align-items: flex-start;
-    max-width: 100%;
-  }
-  .footer-links1 {
-    width: 519px;
-    flex-direction: row;
     justify-content: space-between;
     gap: 20px;
-  }
-  .footer-links {
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 53px 23px 0 0;
-    box-sizing: border-box;
-  }
-  .footer-title {
-    position: relative;
-    line-height: 22px;
-    display: inline-block;
-    min-width: 119px;
-  }
-  .spacer-icon-wrapper {
-    height: 25.7px;
-    width: 20px;
-    position: relative;
-  }
-  .footer-description {
-    flex: 1;
-    position: relative;
-    line-height: 30px;
-  }
-  .spacer-description {
-    width: 225.6px;
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
-    gap: 8px;
-  }
-  .contact-content,
-  .contact-links {
-    align-self: stretch;
-    flex-direction: column;
-    justify-content: flex-start;
-  }
-  .contact-links {
-    display: flex;
-    align-items: flex-start;
-    gap: 22px;
-    font-size: 18px;
-    color: #6f6c90;
-  }
-  .contact-content {
-    gap: 42px;
-  }
-  .contact-content,
-  .contact-info,
-  .footer-content {
-    display: flex;
-    align-items: flex-start;
-  }
-  .contact-info {
-    width: 243px;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding: 53px 0 0;
-    box-sizing: border-box;
-    font-size: 20px;
-    color: #170f49;
-  }
-  .footer-content {
-    width: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    max-width: 100%;
-    gap: 20px;
-  }
-  .footer-content-wrapper,
-  .rides-description {
-    align-self: stretch;
-    display: flex;
-    align-items: flex-start;
-    max-width: 100%;
-  }
-  .footer-content-wrapper {
-    flex-direction: row;
-    justify-content: center;
-    padding: 0 20px 0 35px;
-    box-sizing: border-box;
-    text-align: left;
-    font-size: 18px;
-    color: #6f6c90;
-    font-family: "DM Sans";
-  }
-  .rides-description {
-    flex-direction: column;
-    justify-content: flex-start;
-    gap: 60px;
-    text-align: center;
-    font-size: 50px;
-    color: #00ca00;
-    font-family: Poppins;
-  }
-  .content,
-  .frame-child {
-    align-self: stretch;
-    box-sizing: border-box;
-  }
-  .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-    justify-content: flex-start;
-    padding: 0 0 78px;
-    gap: 98px;
-    max-width: 100%;
-  }
-  .frame-child {
-    height: 1px;
-    position: relative;
-    border-top: 1px solid #d9dbe9;
-  }
-  .footer-left {
-    position: relative;
-    line-height: 30px;
-    flex-shrink: 0;
-  }
-  .terms-and-conditions {
-    text-decoration: underline;
-    color: #5f5f5f;
-  }
-  .footer-right {
-    position: relative;
-    line-height: 30px;
-    text-align: right;
-    display: inline-block;
-    flex-shrink: 0;
-    max-width: 100%;
-  }
-  .footer-end,
-  .footer-end1 {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    max-width: 100%;
-  }
-  .footer-end1 {
-    width: 1219.5px;
-    justify-content: space-between;
-    gap: 20px;
-  }
-  .footer-end {
-    align-self: stretch;
-    justify-content: center;
-    padding: 0 22px 0 20px;
-    box-sizing: border-box;
-  }
-  .desktop-3,
-  .line-parent {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  .line-parent {
-    align-self: stretch;
-    gap: 23.9px;
-    max-width: 100%;
-  }
-  .desktop-3 {
-    width: 100%;
-    position: relative;
-    background-color: #fff;
-    overflow: hidden;
-    padding: 0 0 24.1px;
-    box-sizing: border-box;
-    gap: 30px;
-    line-height: normal;
-    letter-spacing: normal;
-    text-align: left;
-    font-size: 18px;
-    color: #828282;
-    font-family: "DM Sans";
-  }
-  @media screen and (max-width: 1200px) {
-    .content {
-      padding-bottom: 33px;
-      box-sizing: border-box;
+    margin: 40px 0; // Added margin to provide space from the top and bottom
+
+    .oval-card {
+      flex: 1;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid $primary-color;
+      border-radius: 50px;
+      padding: 20px 30px; // Adjusted padding for better fit
+      font-family: $font-poppins-bold;
+      font-size: 22px; // Adjusted font size for better responsiveness
+      color: $primary-color;
+      box-shadow: 0 0 10px rgba(0, 255, 0, 0.3); // Green shadow
+      text-align: center; // Center text within the card
+
+      span {
+        z-index: 1; // Ensure text is above the icon
+      }
+
+      .border-icon {
+        position: absolute;
+        top: -20px;  
+        left: 5%;
+        transform: translateX(-50%);
+        height: 40px; // Reduced size for better alignment
+        background-color: #fff;
+        border-radius: 50%;
+      }
     }
   }
-  @media screen and (max-width: 1050px) {
-    .airport-rides,
-    .city-rides {
-      font-size: 40px;
+
+  // Map Container
+  .map-container {
+    margin-top: 40px; // Space it out from the oval cards
+    padding: 20px; // Add padding for better spacing
+    border: 2px solid #00CA00; // Match the green theme
+    border-radius: 8px; // Round the corners for a softer look
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); // Subtle shadow for depth
+
+    iframe, .map {
+      width: 100%; // Ensure the map takes the full width of the container
+      height: 400px; // Adjust height as needed
+      border: 0; // Remove any default borders
+      border-radius: 8px; // Round the corners of the map itself
     }
-    .content {
-      padding-bottom: 21px;
-      box-sizing: border-box;
-    }
-  }
-  @media screen and (max-width: 750px) {
-    .rides-description {
-      gap: 30px;
-    }
-    .content {
-      gap: 49px;
-    }
-    .footer-end1 {
-      flex-wrap: wrap;
-    }
-  }
-  @media screen and (max-width: 450px) {
-    .city-rides {
-      font-size: 30px;
-    }
-    .zero-emission-rides {
-      font-size: 19px;
-    }
-    .airport-rides {
-      font-size: 30px;
-    }
-    .footer-title {
-      font-size: 16px;
-      line-height: 18px;
-    }
-    .content {
-      gap: 24px;
-      padding-bottom: 20px;
-      box-sizing: border-box;
+
+    @media (max-width: 768px) {
+      height: auto;
+      padding: 15px; // Adjust padding for smaller screens
+
+      iframe, .map {
+        height: 300px; // Smaller height for mobile screens
+      }
     }
   }
-  
+
+  // Responsive Design
+  @media (max-width: 768px) {
+    .riding-experience {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .content,
+      .image-container {
+        max-width: 100%; // Full-width on mobile for proper stacking
+      }
+
+      .ride-options .ride-card {
+        font-size: 16px;
+        max-width: 100%; // Adjust for mobile responsiveness
+
+        span {
+          font-size: 16px;
+        }
+
+        .arrow {
+          font-size: 18px;
+        }
+      }
+    }
+
+    .oval-cards {
+      flex-direction: column; // Stack the oval cards vertically on mobile
+      align-items: center; 
+      gap: 15px; // Reduced gap between stacked cards
+      
+      .oval-card {
+        width: 100%; // Ensure oval cards take full width on mobile
+        padding: 20px; // Adjust padding for smaller screens
+      }
+    }
+  }
+}

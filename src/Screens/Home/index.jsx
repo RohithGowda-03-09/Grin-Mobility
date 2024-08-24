@@ -1,234 +1,188 @@
-import Introduction from "../../components/HomePage Components/Introduction";
-import BenefitsCard from "../../components/HomePage Components/Benifits Card";
-import HomePageServiceCards from "../../components/HomePage Components/Service Crads";
-import FrameComponent6 from "../../components/FrameComponent6"; // yet to convert
-import HomePageDriverRegistration from "../../components/HomePage Components/HomePage Driver Register";
-import FooterColumn from "../../components/Footer";
-import Link from "../../components/Footer/Links";
-import GroupComponent from "../../components/Footer/GroupComponent";
+import React, { useEffect } from "react";
+import { useNavigate } from "react-router-dom";
+import { getStartedImage } from "../../Assets/images";
 import "./Styles.scss";
+import {
+  carbonEnergy,
+  coveringGeoLocation,
+  driveGrin,
+  insearchFor,
+  LeafIcon,
+  rideBookLogo,
+  weeklyPayouts,
+  flexibleHours,
+  zeroOwnerShip
+} from "../../Assets/Icons";
 
+const Home = () => {
+  const navigate = useNavigate();
 
-const HomePage = () => {
+  useEffect(() => {
+    // Function to handle success case
+    const handleSuccess = (position) => {
+      const { latitude, longitude } = position.coords;
+      localStorage.setItem("userLocation", JSON.stringify({ latitude, longitude }));
+    };
+
+    // Function to handle error case
+    const handleError = (error) => {
+      console.error("Error getting location:", error.message);
+    };
+
+    // Request location access
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(handleSuccess, handleError);
+    } else {
+      console.log("Geolocation is not supported by this browser.");
+    }
+  }, []);
+
+  const OvalCard = ({ text }) => (
+    <div className="oval-card">
+      <span>{text}</span>
+      <img src={LeafIcon} alt="Leaf Icon" className="border-icon" />
+    </div>
+  );
+
+  const RideCard = ({ title }) => (
+    <div className="ride-card">
+      <span className="ride-card__text">{title}</span>
+      <div className="ride-card__image">
+        <img src={rideBookLogo} alt="Ride Book Logo" />
+      </div>
+    </div>
+  );
 
   return (
-    <div className="desktop-2">
-      <img className="ev6-icon" alt="" src="/ev6@2x.png" />
-      <img className="ev3-icon" alt="" src="/ev3@2x.png" />
-      <Introduction />
-      <section className="action-buttons-wrapper">
-        <div className="action-buttons">
-          <BenefitsCard />
-          <div className="electric-rides-content-wrapper">
-            <div className="electric-rides-content">
-              <div className="electric-rides-header">
-                <h1 className="electric-rides">
-                  <p className="p">100%</p>
-                  <p className="p">Electric Rides</p>
-                </h1>
+    <>
+
+      <main className="home">
+        <section className="promo-section">
+          <div className="promo-banner">
+            <div className="promo-background" />
+            <h1 className="promo-title">
+              <p>DRIVE YOUR DREAMS</p>
+              <p>WITH OUR EXCLUSIVE DEALS</p>
+            </h1>
+            <h2 className="promo-subtitle">For a sustainable future</h2>
+          </div>
+
+          <div className="promo-content">
+            <div className="promo-card">
+              <div className="card-shadow" />
+              <img
+                className="card-image"
+                src={getStartedImage}
+                alt="Get Started"
+                loading="lazy"
+              />
+              <button
+                className="get-started-button"
+                onClick={() => navigate("/ride")}
+                aria-label="Get Started"
+              >
+                <div className="button-background" />
+                <div className="button-text">Get Started</div>
+              </button>
+            </div>
+          </div>
+        </section>
+
+        <section className="cards-container">
+          <div className="card">
+            <div className="content">
+              <div className="icon">
+                <img src={insearchFor} alt="In search for icon" />
               </div>
-              <h2 className="reliable-safe">{`Reliable, Safe & Premium`}</h2>
-            </div>
-          </div>
-          <div className="pricing-items-parent">
-            <div className="pricing-items">
-              <div className="pricing-items-child" />
-              <div className="reiable-pricing">Reiable Pricing</div>
-              <img
-                className="pricing-items-item"
-                loading="lazy"
-                alt=""
-                src="/group-394721.svg"
-              />
-            </div>
-            <div className="pricing-items1">
-              <div className="pricing-items-inner" />
-              <div className="reiable-pricing">Zero emission</div>
-              <img
-                className="group-icon"
-                loading="lazy"
-                alt=""
-                src="/group-394721.svg"
-              />
-            </div>
-            <div className="pricing-items2">
-              <div className="pricing-items-inner" />
-              <div className="reiable-pricing">Zero Cancellation</div>
-              <img
-                className="pricing-items-child1"
-                loading="lazy"
-                alt=""
-                src="/group-394721.svg"
-              />
-            </div>
-          </div>
-          <HomePageServiceCards />
-          <div className="apply-charge">
-            <h1 className="apply-to-drive">Apply to Drive</h1>
-          </div>
-          <FrameComponent6 />
-          <div className="apply-charge1">
-            <h1 className="electric-rides">Charge your Grin</h1>
-          </div>
-        </div>
-      </section>
-      <HomePageDriverRegistration />
-      <div className="divider-container">
-        <div className="divider3" />
-      </div>
-      <footer className="footer1">
-        <div className="footer-content2">
-          <div className="frame-parent">
-            <div className="ev12-container">
-              <img className="ev12-icon2" alt="" src="/ev12@2x.png" />
-            </div>
-            <div className="copyright-social2">
-              <div className="copyright2">
-                <p className="p">Drive your dream with our exclusive</p>
-                <p className="p">deals. For a sustainable future.</p>
+              <div className="text">
+                <h3>In search for</h3>
+                <p>Sustainable commuters</p>
               </div>
-              <div className="social-icons1">
-                <div className="social-media-icon-squarefaceb2">
-                  <div className="social-media-icon8" />
-                  <img
-                    className="facebook-icon2"
-                    loading="lazy"
-                    alt=""
-                    src="/facebook.svg"
-                  />
-                </div>
-                <div className="twitter-you-tube4">
-                  <div className="social-media-icon-squaretwitt2">
-                    <div className="social-media-icon9" />
-                    <img
-                      className="twitter-icon2"
-                      loading="lazy"
-                      alt=""
-                      src="/twitter.svg"
-                    />
+            </div>
+          </div>
+          <div className="card">
+            <div className="content">
+              <div className="icon">
+                <img src={coveringGeoLocation} alt="Covering Geo Location icon" />
+              </div>
+              <div className="text">
+                <h3>Covering</h3>
+                <p>Geo Locations</p>
+              </div>
+            </div>
+          </div>
+          <div className="card">
+            <div className="content">
+              <div className="icon">
+                <img src={carbonEnergy} alt="Sustaining Carbon Emission icon" />
+              </div>
+              <div className="text">
+                <h3>Sustaining</h3>
+                <p>Carbon emission</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="electric-rides-container">
+          <h1 className="headline">100%</h1>
+          <h2 className="subheadline">Electric Rides</h2>
+          <p className="tagline">Reliable, Safe & Premium</p>
+        </section>
+
+        <section className="benifits-card-container">
+          <div className="oval-cards">
+            <OvalCard text="Reliable Pricing" />
+            <OvalCard text="Zero Emission" />
+            <OvalCard text="Zero Cancellation" />
+          </div>
+
+          <div className="ride-cards">
+            <RideCard title="City Rides" />
+            <RideCard title="Rental Rides" />
+            <RideCard title="Airport Rides" />
+          </div>
+        </section>
+
+        <section className="apply-to-drive">
+          <h1>Apply to Drive</h1>
+          <div className="content">
+            <div className="info">
+              <p>
+                Join the Grin community and unlock a world of opportunities by
+                being a valued driver-partner.
+              </p>
+              <ul className="benefits">
+                <li>
+                  <div className="icon">
+                    <img src={weeklyPayouts} alt="Weekly Payouts & Bonus" />
                   </div>
-                </div>
-                <img
-                  className="social-media-icon-squareinsta2"
-                  loading="lazy"
-                  alt=""
-                  src="/social-media-icon-squareinstagram@2x.png"
-                />
-                <div className="social-media-icon-squarelinke2">
-                  <div className="social-media-icon10" />
-                  <img
-                    className="linkedin-icon2"
-                    loading="lazy"
-                    alt=""
-                    src="/linkedin.svg"
-                  />
-                </div>
-                <div className="twitter-you-tube5">
-                  <div className="social-media-icon-squareyoutu2">
-                    <div className="social-media-icon11" />
-                    <img
-                      className="youtube-icon2"
-                      loading="lazy"
-                      alt=""
-                      src="/youtube.svg"
-                    />
+                  <span>Weekly Payouts & Bonus</span>
+                </li>
+                <li>
+                  <div className="icon">
+                    <img src={flexibleHours} alt="Flexible working hours" />
                   </div>
-                </div>
-              </div>
+                  <span>Flexible working hours</span>
+                </li>
+                <li>
+                  <div className="icon">
+                    <img src={zeroOwnerShip} alt="Zero ownership cost" />
+                  </div>
+                  <span>Zero ownership cost</span>
+                </li>
+              </ul>
+            </div>
+            <div className="apply-to-drive-image-container">
+              <img src={driveGrin} alt="Driver holding phone" />
+              <button className="apply-button" aria-label="Apply to Drive">Apply</button>
             </div>
           </div>
-          <div className="footer-links-content-wrapper">
-            <div className="footer-links-content">
-              <FooterColumn
-                footerTitle="Product"
-                features="Features"
-                pricing="Pricing"
-                caseStudies="Case studies"
-                reviews="Reviews"
-                updates="Updates"
-              />
-              <FooterColumn
-                footerTitle="Company"
-                propMinWidth="94px"
-                features="About"
-                propMinWidth1="52px"
-                propTextDecoration="none"
-                pricing="Contact us"
-                propTextDecoration1="none"
-                propMinWidth2="92px"
-                caseStudies="Careers"
-                propMinWidth3="66px"
-                propTextDecoration2="none"
-                reviews="Culture"
-                propMinWidth4="62px"
-                updates="Blog"
-                propMinWidth5="36px"
-              />
-              <FooterColumn
-                footerTitle="Support"
-                propMinWidth="80px"
-                features="Getting started"
-                propMinWidth1="127px"
-                propTextDecoration="unset"
-                pricing="Help center"
-                propTextDecoration1="unset"
-                propMinWidth2="98px"
-                caseStudies="Server status"
-                propMinWidth3="110px"
-                propTextDecoration2="unset"
-                reviews="Report a bug"
-                propMinWidth4="108px"
-                updates="Chat support"
-                propMinWidth5="111px"
-              />
-            </div>
-          </div>
-          <div className="footer-address">
-            <div className="address-content">
-              <b className="footer-title2">Contacts us</b>
-              <div className="contact-info1">
-                <Link
-                  propAlignSelf="stretch"
-                  lineRoundedPhone="/line-roundedemail.svg"
-                  linkItem="contact@grinmobilty.com"
-                />
-                <Link
-                  lineRoundedPhone="/line-roundedphone.svg"
-                  linkItem="(414) 687 - 5892"
-                />
-                <div className="description-container">
-                  <img
-                    className="spacer-icon-wrapper2"
-                    loading="lazy"
-                    alt=""
-                    src="/spacer-icon-wrapper.svg"
-                  />
-                  <div className="footer-description2">Bangalore</div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </footer>
-      <div className="line-container">
-        <div className="frame-inner" />
-        <div className="footer-content-container">
-          <div className="footer-content3">
-            <div className="footer-left2">Copyright © grinmobilty</div>
-            <div className="footer-right2">
-              <span>{`All Rights Reserved | `}</span>
-              <span className="terms-and-conditions2">
-                Terms and Conditions
-              </span>
-              <span>{` | `}</span>
-              <span className="terms-and-conditions2">Privacy Policy</span>
-            </div>
-          </div>
-        </div>
-      </div>
-      <GroupComponent />
-    </div>
+        </section>
+      </main>
+
+    </>
   );
 };
 
-export default HomePage;
+export default Home;
