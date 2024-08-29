@@ -1,0 +1,181 @@
+.search-section {
+    padding: 1.5rem;
+    border: 2px solid #ccc;
+    border-radius: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: 0 auto;
+    font-family: 'Poppins', sans-serif;
+  
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1rem;
+  
+      .title {
+        font-size: 2rem;
+        font-weight: bold;
+        color: #00ca00;
+      }
+  
+      .dropdown {
+        position: relative;
+        width: 280px; // Increased width
+  
+        select {
+          width: 100%;
+          padding: 1rem; // Increased padding for a bigger clickable area
+          border: 2px solid #00ca00;
+          border-radius: 0.5rem;
+          background-color: white;
+          box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+          font-size: 1.125rem; // Increased font size
+          font-weight: 500;
+          color: #333;
+          font-family: 'Poppins', sans-serif;
+          appearance: none;
+          cursor: pointer; // Added cursor pointer
+          transition: all 0.3s ease;
+  
+          &:hover,
+          &:focus {
+            border-color: #008f00;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+          }
+  
+          &:focus {
+            outline: none;
+            border-color: #006f00;
+            box-shadow: 0 0 0 3px rgba(0, 175, 0, 0.2);
+          }
+        }
+  
+        option {
+          padding: 0.85rem; // Increased padding for dropdown options
+          background-color: #f9f9f9;
+          color: #333;
+          font-weight: 500;
+          font-size: 1rem; // Increased font size for dropdown options
+          cursor: pointer;
+  
+          &:hover {
+            background-color: #e9e9e9;
+          }
+        }
+  
+        &:after {
+          content: "▼";
+          position: absolute;
+          right: 10px;
+          top: 50%;
+          transform: translateY(-50%);
+          font-size: 0.75rem;
+          color: #00ca00;
+        }
+      }
+    }
+  
+    .description {
+      font-size: 1.25rem;
+      color: #555;
+      margin-bottom: 1rem;
+    }
+  
+    .result {
+      margin-top: 1rem;
+  
+      .result-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+        &.distance {
+          background-color: #d4edda;
+          border: 1px solid #c3e6cb;
+  
+          .icon {
+            color: #28a745;
+            margin-right: 0.5rem;
+          }
+  
+          .text {
+            color: #155724;
+          }
+        }
+  
+        &.time {
+          background-color: #cce5ff;
+          border: 1px solid #b8daff;
+  
+          .icon {
+            color: #007bff;
+            margin-right: 0.5rem;
+          }
+  
+          .text {
+            color: #004085;
+          }
+        }
+      }
+    }
+  }
+  .dropdown select {
+    width: 100%;
+    padding: 1rem;
+    border: 2px solid #00ca00;
+    border-radius: 0.5rem;
+    background-color: white;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: #333;
+    font-family: 'Poppins', sans-serif;
+    appearance: none;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  
+    &:hover,
+    &:focus {
+      border-color: #008f00;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    }
+  
+    &:focus {
+      outline: none;
+      border-color: #006f00;
+      box-shadow: 0 0 0 3px rgba(0, 175, 0, 0.2);
+    }
+  
+    option {
+      padding: 1rem; // Increased padding for a more substantial feel
+      background-color: #f0f0f0; // Light background for the options
+      color: #333; // Consistent text color
+      font-weight: 500; // Keep the font weight strong
+      font-size: 1.05rem; // Slightly larger font size for clarity
+      height: 3rem; // Increased height for a more prominent option size
+      cursor: pointer;
+  
+      &:hover {
+        background-color: #dfe6e9; // Subtle hover effect for options
+      }
+  
+      &:disabled {
+        display: none; // Hides the disabled 'Book Your Choice' option
+      }
+    }
+  }
+  
+  .dropdown::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 0.75rem;
+    color: #00ca00;
+  }
+  

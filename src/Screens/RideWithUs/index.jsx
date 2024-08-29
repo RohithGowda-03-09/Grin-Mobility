@@ -1,16 +1,19 @@
-import React, { useRef } from 'react';
+import React, { useRef, useState } from 'react';
 import './Styles.scss';
 import { LeafIcon, RideWithUsImgae } from '../../Assets/Icons';
 import MapPage from './Components/Map';
+import CarListOptions from './Components/CarListOptions';
 
 const RideWithUs = () => {
   const mapRef = useRef(null);
-
+  const [carDistance, setCarDistance] = useState(null);
   const scrollToMap = () => {
     if (mapRef.current) {
       mapRef.current.scrollIntoView({ behavior: 'smooth' });
     }
   };
+
+
 
   const OvalCard = ({ text }) => (
     <div className="oval-card">
@@ -52,7 +55,10 @@ const RideWithUs = () => {
       </div>
 
       <div className="map-container" ref={mapRef}>
-        <MapPage />
+        <MapPage setCarDistance={setCarDistance} />
+      </div>
+      <div>
+      {carDistance?<CarListOptions carDistance={carDistance}/>:null}
       </div>
     </div>
   );

@@ -1,0 +1,265 @@
+.car-list-container {
+    position: relative;
+    padding-bottom: 60px; // Space for the fixed container
+    max-height: 100vh;
+    overflow-y: auto;
+}
+
+.car-list-items {
+    padding: 20px;
+}
+
+.car-list-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 20px;
+    padding: 20px;
+    border-radius: 12px;
+    background-color: #f9f9f9;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, transform 0.3s ease, border 0.3s ease;
+
+    &:hover {
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+        transform: translateY(-3px);
+        background-color: #fff;
+    }
+
+    &.selected {
+        border: 1px solid #1d1d1d;
+    }
+}
+.car-image-container {
+    flex-shrink: 0;
+    margin-right: 20px;
+    display: flex; // Ensure flex container
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+}
+
+.car-image {
+    font-size: 30px; // Adjust size as needed
+    color: #333; // Icon color
+    border-radius: 8px;
+    border: 2px solid #ddd;
+    transition: border 0.3s ease;
+    display: flex; // Ensure flex container for centering
+    justify-content: center; // Center horizontally
+    align-items: center; // Center vertically
+
+
+}
+
+
+.car-details {
+    flex-grow: 1;
+    margin-right: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.car-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 5px;
+}
+
+.car-name {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 20px;
+    color: #333;
+    margin: 0;
+    transition: color 0.3s ease;
+
+    &:hover {
+        color: #00CA00;
+    }
+}
+
+.car-seats {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    background-color: #f1f1f1;
+    padding: 5px 10px;
+    border-radius: 20px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+
+    .car-list-item:hover & {
+        background-color: #00CA00;
+        color: #fff;
+    }
+}
+
+.seat-icon {
+    margin-right: 5px;
+    font-size: 16px;
+}
+
+.car-description {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+}
+
+.car-amount {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 22px;
+    color: #00CA00;
+    text-align: right;
+    min-width: 100px;
+}
+
+.fixed-bottom-container {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    border-top: 1px solid #ddd;
+    padding: 15px 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.fixed-heading {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 18px;
+    color: #333;
+    margin: 0;
+}
+
+.fixed-button {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    color: #fff;
+    background-color: #000;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: #333;
+    }
+}
+
+// Media Queries
+
+@media (max-width: 768px) {
+    .car-list-item {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 15px;
+    }
+
+    .car-image-container {
+        margin-right: 0;
+        margin-bottom: 15px;
+        text-align: center;
+    }
+
+    .car-image {
+        width: 100px; // Adjust size for smaller screens
+        height: auto;
+    }
+
+    .car-details {
+        margin-right: 0;
+        text-align: left;
+    }
+
+    .car-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 5px;
+        margin-bottom: 5px;
+    }
+
+    .car-name {
+        font-size: 16px;
+    }
+
+    .car-seats {
+        font-size: 12px;
+        padding: 3px 6px;
+    }
+
+    .seat-icon {
+        font-size: 16px;
+    }
+
+    .car-description {
+        font-size: 12px;
+    }
+
+    .car-amount {
+        font-size: 18px;
+    }
+
+    .fixed-heading {
+        font-size: 16px;
+    }
+
+    .fixed-button {
+        font-size: 14px;
+        padding: 8px 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .car-list-item {
+        padding: 10px;
+    }
+
+    .car-image {
+        width: 80px; // Further adjust size for very small screens
+        height: auto;
+    }
+
+    .car-name {
+        font-size: 14px;
+    }
+
+    .car-seats {
+        font-size: 11px;
+        padding: 2px 5px;
+    }
+
+    .seat-icon {
+        font-size: 14px;
+    }
+
+    .car-description {
+        font-size: 11px;
+    }
+
+    .car-amount {
+        font-size: 16px;
+    }
+
+    .fixed-heading {
+        font-size: 14px;
+    }
+
+    .fixed-button {
+        font-size: 12px;
+        padding: 6px 12px;
+    }
+}

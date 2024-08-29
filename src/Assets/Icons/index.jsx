@@ -13,6 +13,9 @@ import footerLogo from '../Icons/Grin-Logo.png'
 import RideWithUsImgae from '../Icons/ride-with-us-image.svg'
 import sourceIcon from '../Icons/source-icon.svg'
 import whereToIcon from '../Icons/whereToIcon.svg'
+import economyCar from '../Icons/economy-car.jpg'
+import comfortCar from '../Icons/comfort-car.jpg'
+import bookAride from '../Icons/bookaride.svg'
 
 
-export{LoginBgImage,insearchFor,whereToIcon,sourceIcon,coveringGeoLocation,carbonEnergy,LeafIcon,rideBookLogo,driveGrin,weeklyPayouts,flexibleHours,zeroOwnerShip,GrinLogo,footerLogo,RideWithUsImgae}
+export{LoginBgImage,bookAride,comfortCar,economyCar,insearchFor,whereToIcon,sourceIcon,coveringGeoLocation,carbonEnergy,LeafIcon,rideBookLogo,driveGrin,weeklyPayouts,flexibleHours,zeroOwnerShip,GrinLogo,footerLogo,RideWithUsImgae}

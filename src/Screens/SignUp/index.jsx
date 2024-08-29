@@ -9,7 +9,7 @@ const SignupPage = () => {
   const navigate = useNavigate();
 
   const handleLoginClick = () => {
-    navigate('/');
+    navigate('/login');
   };
 
   const handleGoogleSignUp = async () => {
@@ -27,7 +27,7 @@ const SignupPage = () => {
     <div className="auth-container">
       <div className="auth-box">
         <h1 className="auth-title">Sign Up</h1>
-        <form className="auth-form">
+        {/* <form className="auth-form">
           <div className="form-group">
             <input type="text" placeholder="Name" className="auth-input" required />
           </div>
@@ -41,7 +41,7 @@ const SignupPage = () => {
             <input type="password" placeholder="Confirm Password" className="auth-input" required />
           </div>
           <button type="submit" className="auth-button">Sign Up</button>
-        </form>
+        </form> */}
         <div className="auth-footer">
           <p>Already have an account? <button onClick={handleLoginClick} className="auth-link-button">Login</button></p>
           <button className="auth-google-button" onClick={handleGoogleSignUp}>

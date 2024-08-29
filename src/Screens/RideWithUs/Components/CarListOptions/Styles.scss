@@ -1,0 +1,98 @@
+// CarListOptions.scss
+
+.car-list-container {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: 80vh; // Adjust height as needed
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.25); // More pronounced shadow
+
+  border-radius: 6px;
+  margin-top: 20px;
+
+  .car-list-content {
+    padding: 20px;
+    height: calc(100% - 60px); // Adjust based on button height
+    overflow-y: auto;
+
+    .car-list-heading {
+      font-size: 22px;
+      font-weight: bold;
+    }
+
+    .car-list-scrollable {
+      max-height: 100%;
+      overflow-y: auto;
+
+      // Scrollbar styles
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+
+      &::-webkit-scrollbar-thumb {
+        background-color: #00ca00;
+        border-radius: 4px;
+      }
+    }
+  }
+
+  .car-list-buttons {
+    position: absolute;
+    bottom: 0;
+    left: 0; // Align buttons to the left
+    width: 100%; // Full width of container
+    padding: 10px;
+    background-color: white; // Ensure the background is visible
+    box-sizing: border-box; // Include padding in width
+    display: flex;
+    gap: 26px;
+    justify-content: flex-start; // Align buttons to the left
+
+    .book-ride-btn {
+      display: flex;
+      align-items: center;
+      background-color: black;
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      color: white;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+      transition: background-color 0.3s ease, transform 0.3s ease;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    
+      .icon {
+        margin-right: 10px; // Adjust spacing as needed
+        font-size: 20px; // Adjust size as needed
+      }
+    
+      &:hover {
+        background-color: darken(black, 10%);
+        transform: scale(1.05);
+      }
+    
+      &:focus {
+        outline: none;
+        box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.2);
+      }
+    }
+    
+    
+    .make-payment-btn {
+      border: none;
+      border-radius: 8px;
+      padding: 12px 20px;
+      cursor: pointer;
+      font-size: 16px;
+      font-weight: bold;
+
+
+
+    }
+
+    .book-ride-btn {
+      background-color: black;
+    }
+  }
+}

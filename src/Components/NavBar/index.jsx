@@ -10,18 +10,17 @@ const NavBar = () => {
   const [activeLink, setActiveLink] = useState('home');
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const isAuthenticated = localStorage.getItem('authToken'); // Check if the user is authenticated
   const navigate = useNavigate();
   const location = useLocation(); // Hook to get current location
 
   useEffect(() => {
-    // Update active link based on the current route
     const path = location.pathname;
     if (path === '/ride') {
       setActiveLink('ride');
     } else if (path === '/') {
       setActiveLink('home');
     }
-    // Add other paths as needed
   }, [location.pathname]);
 
   const toggleSidebar = () => {
@@ -42,8 +41,12 @@ const NavBar = () => {
 
   const handleLogout = () => {
     localStorage.clear(); // Clear local storage
-    navigate('/'); // Redirect to login page
+    navigate('/login'); // Redirect to login page
     closeModal(); // Close the modal after logout
+  };
+
+  const handleLogin = () => {
+    navigate('/login'); // Redirect to login page
   };
 
   return (
@@ -79,31 +82,28 @@ const NavBar = () => {
             Ride with us
           </Link>
           {/* Uncomment and add other links as needed */}
-          {/* <Link 
-            to="/drive" 
-            className={`nav-link ${activeLink === 'drive' ? 'active' : ''}`}
-            onClick={() => setActiveLink('drive')}
-          >
-            Drive with us
-          </Link>
-          <Link 
-            to="/charge" 
-            className={`nav-link ${activeLink === 'charge' ? 'active' : ''}`}
-            onClick={() => setActiveLink('charge')}
-          >
-            Let's charge
-          </Link> */}
         </div>
         <div className="navbar-actions">
           <button className="download-btn">Download App</button>
-          <button 
-            className="logout-btn" 
-            onClick={openModal} 
-            aria-label="Logout"
-          >
-            <FaSignOutAlt />
-            <span className="logout-text">Logout</span>
-          </button>
+          {isAuthenticated ? (
+            <button 
+              className="logout-btn" 
+              onClick={openModal} 
+              aria-label="Logout"
+            >
+              <FaSignOutAlt />
+              <span className="logout-text">Logout</span>
+            </button>
+          ) : (
+            <button 
+              className="logout-btn" 
+              onClick={handleLogin} 
+              aria-label="Login"
+            >
+              <FaSignOutAlt />
+              <span className="logout-text">Login</span>
+            </button>
+          )}
         </div>
       </div>
     </>

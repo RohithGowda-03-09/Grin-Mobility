@@ -1,7 +1,9 @@
-// firebase.js
+// Import the necessary Firebase modules
 import { initializeApp } from 'firebase/app';
 import { getAuth, RecaptchaVerifier, signInWithPhoneNumber } from 'firebase/auth';
+import { getFirestore } from 'firebase/firestore';
 
+// Firebase configuration object
 const firebaseConfig = {
   apiKey: "AIzaSyBNOc2VFDGNTzry4acD5YcFPDp4iBVLfYE",
   authDomain: "grin-mobility-b6289.firebaseapp.com",
@@ -14,6 +16,10 @@ const firebaseConfig = {
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-const auth = getAuth(app);
 
-export { auth, RecaptchaVerifier, signInWithPhoneNumber };
+// Initialize Firebase Authentication and Firestore
+const auth = getAuth(app);
+const db = getFirestore(app);
+
+// Export the Firebase modules you need
+export { auth, RecaptchaVerifier, signInWithPhoneNumber, db };

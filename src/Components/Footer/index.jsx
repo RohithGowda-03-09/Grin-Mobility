@@ -56,8 +56,8 @@ const Footer = () => {
           <div className="footer-column">
             <h4 className="footer-title">Contact us</h4>
             <ul>
-              <li>Email: contact@grinmobility.com</li>
-              <li>Phone: (414) 687 - 5892</li>
+              <li>Email: support@grinmobility.com</li>
+              <li>Phone:+91 8999743406 </li>
               <li>Location: Bangalore</li>
             </ul>
           </div>

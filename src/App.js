@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginPage from "./Screens/Login";
 import SignupPage from "./Screens/SignUp";
@@ -8,13 +8,25 @@ import ProtectedRoute from "./Components/ProtectedRoute";
 import RideWithUs from "./Screens/RideWithUs";
 import { LoadScript } from "@react-google-maps/api";
 import Layout from "./Screens/RideWithUs/Components/Layout";
+import Loader from "./Components/Loader";
 
 const App = () => {
+  const isAuthenticated = !!localStorage.getItem('authToken'); // Check authentication status
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 2000);
+  }, []);
+
+  if (loading) {
+    return <Loader />;
+  }
   return (
     <Router>
-      <LoadScript googleMapsApiKey={process.env.REACT_APP_GOOGLE_MAPS_API_KEY} libraries={["places"]}>
+      <LoadScript googleMapsApiKey="AIzaSyA_V4J1t09TrGyClkuYzvENZvJoba15i2c" libraries={["places"]}>
         <Routes>
-        
           <Route
             path="/signup"
             element={
@@ -24,10 +36,10 @@ const App = () => {
             }
           />
           <Route
-            path="/home"
+            path="/"
             element={
               <Layout>
-                <ProtectedRoute element={Home} />
+                <Home />
               </Layout>
             }
           />
@@ -35,12 +47,16 @@ const App = () => {
             path="/ride"
             element={
               <Layout>
-                <ProtectedRoute element={RideWithUs} />
+                {isAuthenticated ? (
+                  <ProtectedRoute element={RideWithUs} />
+                ) : (
+                  <RideWithUs />
+                )}
               </Layout>
             }
           />
           <Route
-            path="/"
+            path="/login"
             element={
               <Layout>
                 <LoginPage />

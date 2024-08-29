@@ -4,8 +4,9 @@ import SearchSection from "../SearchSection";
 import { SourceContext } from "../../../../Context/SourceContext";
 import { DestinationContext } from "../../../../Context/DestinationContext";
 
-function MapPage() {
+function MapPage({setCarDistance}) {
   const [source, setSource] = useState([]);
+  const [selectCurrentLocation, setSelectCurrentLocation] = useState([]);
   const [destination, setDestination] = useState([]);
   
   return (
@@ -13,10 +14,10 @@ function MapPage() {
       <DestinationContext.Provider value={{ destination, setDestination }}>
         <div className="p-6 grid grid-cols-1 md:grid-cols-2 gap-5">
           <div>
-            <SearchSection />
+            <SearchSection setCarDistance={setCarDistance} selectCurrentLocation={selectCurrentLocation} />
           </div>
           <div className="Col-span-2">
-            <GoogleMapSection />
+            <GoogleMapSection  setSelectCurrentLocation={setSelectCurrentLocation}/>
           </div>
         </div>
       </DestinationContext.Provider>
