@@ -11,7 +11,8 @@ import {
   rideBookLogo,
   weeklyPayouts,
   flexibleHours,
-  zeroOwnerShip
+  zeroOwnerShip,
+  bgVideo
 } from "../../Assets/Icons";
 
 const Home = () => {
@@ -60,6 +61,13 @@ const Home = () => {
         <section className="promo-section">
           <div className="promo-banner">
             <div className="promo-background" />
+            <video
+            className="promo-video"
+            src={bgVideo}
+            autoPlay
+            muted
+            loop
+          />
             <h1 className="promo-title">
               <p>DRIVE YOUR DREAMS</p>
               <p>WITH OUR EXCLUSIVE DEALS</p>

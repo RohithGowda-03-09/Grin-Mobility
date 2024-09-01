@@ -1,0 +1,33 @@
+.location-button {
+    position: absolute;
+    right: 2rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: #00CA00;
+    padding: 15px;
+    border-radius: 50%;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+  }
+  
+  .location-button:hover {
+    background-color: #009a00; /* Darken the button on hover */
+    transform: translateY(-50%) scale(1.1); /* Slightly enlarge the button */
+  }
+  
+  .location-button:active {
+    transform: translateY(-50%) scale(0.95); /* Shrink the button on click */
+  }
+  
+  .location-icon {
+    width: 20px;
+    height: 20px;
+    color: white;
+    transition: color 0.3s ease;
+  }
+  
+  .location-button:hover .location-icon {
+    color: #e0e0e0; /* Lighten the icon color on hover */
+  }
+  

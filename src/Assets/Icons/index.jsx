@@ -15,7 +15,11 @@ import sourceIcon from '../Icons/source-icon.svg'
 import whereToIcon from '../Icons/whereToIcon.svg'
 import economyCar from '../Icons/economy-car.jpg'
 import comfortCar from '../Icons/comfort-car.jpg'
+import LoginBgImageNew from '../Icons/comfort-car.jpg'
 import bookAride from '../Icons/bookaride.svg'
+import rupeeIcon from '../Icons/rupee-icon.jpg'
+import liveLocation from '../Icons/live-location.png'
+import bgVideo from '../Icons/home-bg-video.mp4'
 
 
-export{LoginBgImage,bookAride,comfortCar,economyCar,insearchFor,whereToIcon,sourceIcon,coveringGeoLocation,carbonEnergy,LeafIcon,rideBookLogo,driveGrin,weeklyPayouts,flexibleHours,zeroOwnerShip,GrinLogo,footerLogo,RideWithUsImgae}
+export{bgVideo,liveLocation,rupeeIcon,LoginBgImageNew,LoginBgImage,bookAride,comfortCar,economyCar,insearchFor,whereToIcon,sourceIcon,coveringGeoLocation,carbonEnergy,LeafIcon,rideBookLogo,driveGrin,weeklyPayouts,flexibleHours,zeroOwnerShip,GrinLogo,footerLogo,RideWithUsImgae}

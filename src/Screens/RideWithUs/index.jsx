@@ -7,6 +7,7 @@ import CarListOptions from './Components/CarListOptions';
 const RideWithUs = () => {
   const mapRef = useRef(null);
   const [carDistance, setCarDistance] = useState(null);
+  const [userRideType, setUserRideType] = useState(null);
   const scrollToMap = () => {
     if (mapRef.current) {
       mapRef.current.scrollIntoView({ behavior: 'smooth' });
@@ -55,7 +56,7 @@ const RideWithUs = () => {
       </div>
 
       <div className="map-container" ref={mapRef}>
-        <MapPage setCarDistance={setCarDistance} />
+        <MapPage setCarDistance={setCarDistance} setUserRideType={setUserRideType} userRideType={userRideType} />
       </div>
       <div>
       {carDistance?<CarListOptions carDistance={carDistance}/>:null}

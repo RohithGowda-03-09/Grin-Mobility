@@ -86,7 +86,9 @@ const LoginPage = () => {
     setLoading(true);
     try {
       const result = await signInWithPopup(auth, provider);
+      console.log(auth)
       localStorage.setItem('authToken', result.user.refreshToken);
+      localStorage.setItem('user-email',auth.currentUser.email);
       navigate(redirectTo);
     } catch (error) {
       setError('Error signing in with Google');

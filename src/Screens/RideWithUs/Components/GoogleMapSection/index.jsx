@@ -8,7 +8,7 @@ import {
 import { SourceContext } from "../../../../Context/SourceContext";
 import { DestinationContext } from "../../../../Context/DestinationContext";
 
-function GoogleMapSection() {
+function GoogleMapSection({ userRideType }) {
   const containerStyle = {
     width: "100%",
     height: "100%",
@@ -62,19 +62,30 @@ function GoogleMapSection() {
 
   useEffect(() => {
     if (source && isValidLatLng(source) && map) {
-      map.panTo({
-        lat: source.lat,
-        lng: source.lng,
-      });
-      setCenter({
-        lat: source.lat,
-        lng: source.lng,
-      });
+      map.panTo({ lat: source.lat, lng: source.lng });
+      setCenter({ lat: source.lat, lng: source.lng });
     }
-    if (isValidLatLng(source) && isValidLatLng(destination)) {
+    if (destination && isValidLatLng(destination) && source) {
       directionRoute();
     }
   }, [source, map, directionRoute, destination]);
+
+  useEffect(() => {
+    if (userRideType === 'Airport Rides' && source) {
+      // Mark Bangalore Airport on map
+      setCenter({ lat: source.lat, lng: source.lng });
+    } else if (userRideType === 'City Rides' || userRideType === 'Rental Rides') {
+      // Clear markers and route, and show current location if both inputs are cleared
+      if (!source && !destination) {
+        if (currentLocation) {
+          setCenter({ lat: currentLocation.lat, lng: currentLocation.lng });
+        }
+        setDirectionRoutePoint(null);
+      } else {
+        setDirectionRoutePoint(null);
+      }
+    }
+  }, [userRideType, source, destination, currentLocation]);
 
   useEffect(() => {
     if (destination && isValidLatLng(destination) && map) {

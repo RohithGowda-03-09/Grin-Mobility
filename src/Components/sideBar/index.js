@@ -20,13 +20,7 @@ const Sidebar = ({ isOpen, onClose }) => {
           Home
         </Link>
         <Link to="/ride" className="nav-item" onClick={onClose}>
-          Ride with us
-        </Link>
-        <Link to="/drive" className="nav-item" onClick={onClose}>
-          Drive with us
-        </Link>
-        <Link to="/charge" className="nav-item" onClick={onClose}>
-          Let's charge
+          Ride with Us
         </Link>
       </nav>
     </div>

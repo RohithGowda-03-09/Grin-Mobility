@@ -3,8 +3,10 @@ import GooglePlacesAutocomplete from "react-google-places-autocomplete";
 import { DestinationContext } from "../../../../Context/DestinationContext";
 import { SourceContext } from "../../../../Context/SourceContext";
 import { sourceIcon, whereToIcon } from "../../../../Assets/Icons";
+import { MdMyLocation } from "react-icons/md"
+import "./Styles.scss";
 
-function InputItem({ type }) {
+function InputItem({ type ,rideType}) {
   const [value, setValue] = useState(null);
   const { setSource } = useContext(SourceContext);
   const { setDestination } = useContext(DestinationContext);
@@ -51,20 +53,83 @@ function InputItem({ type }) {
     [setSource, setDestination, type]
   );
 
+  const handleLocationClick = () => {
+    if (type === "source" && navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          const { latitude, longitude } = position.coords;
+  
+          // Reverse Geocoding to get the place name
+          const geocoder = new window.google.maps.Geocoder();
+          const latLng = new window.google.maps.LatLng(latitude, longitude);
+  
+          geocoder.geocode({ location: latLng }, (results, status) => {
+            if (status === "OK") {
+              if (results[0]) {
+                const address = results[0].formatted_address;
+                const latLngData = {
+                  lat: latitude,
+                  lng: longitude,
+                  name: "address",
+                  label: address,
+                };
+  
+                setValue({ label: latLngData.label, value: { place_id: "" } });
+                setSource(latLngData);
+                localStorage.setItem('source', JSON.stringify(latLngData));
+              } else {
+                console.error("No results found");
+              }
+            } else {
+              console.error("Geocoder failed due to: " + status);
+            }
+          });
+        },
+        (error) => console.error("Error getting location:", error),
+        {
+          enableHighAccuracy: true,
+          timeout: 5000,
+          maximumAge: 0,
+        }
+      );
+    }
+  };
+  
+
   useEffect(() => {
-    // Retrieve saved data
-    const savedData = type === "source" ? 'source' : 'destination';
-    const savedPlace = JSON.parse(localStorage.getItem(savedData));
-    
-    if (savedPlace) {
-      setValue({ label: savedPlace.label, value: { place_id: savedPlace.placeId } });
-      if (type === "source") {
-        setSource(savedPlace);
+    if (type === "source") {
+      if (rideType === 'Airport Rides') {
+        // Auto-fill for Kempegowda International Airport
+        const kempegowdaAirport = {
+          lat: 13.1986,
+          lng: 77.7066,
+          label: 'Kempegowda International Airport',
+          placeId: 'airport-place-id' // Placeholder ID, adjust if necessary
+        };
+        setValue({ label: kempegowdaAirport.label, value: { place_id: kempegowdaAirport.placeId } });
+        setSource(kempegowdaAirport);
       } else {
-        setDestination(savedPlace);
+        // Clear the input for other ride types
+        setValue(null);
+        setSource(null);
       }
     }
-  }, [setSource, setDestination, type]);
+  
+    if (type === "destination") {
+      if (rideType === 'City Rides' || rideType === 'Rental Rides') {
+        // Clear the input for City Rides and Rental Rides
+        setValue(null);
+        setDestination(null);
+      } else {
+        const savedPlace = JSON.parse(localStorage.getItem('destination'));
+        if (savedPlace) {
+          setValue({ label: savedPlace.label, value: { place_id: savedPlace.placeId } });
+          setDestination(savedPlace);
+        }
+      }
+    }
+  }, [setSource, setDestination, type, rideType]);
+  
 
   const placeholder = type === "source" ? "Pickup Location" : "Dropoff Location";
 
@@ -131,6 +196,16 @@ function InputItem({ type }) {
         }}
         className="w-full"
       />
+
+{type === "source" && (
+        <button
+          onClick={handleLocationClick}
+          className="location-button"
+        >
+          <MdMyLocation className="location-icon" />
+        </button>
+      )}
+
     </div>
   );
 }

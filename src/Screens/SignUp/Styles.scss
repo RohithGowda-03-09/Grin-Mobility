@@ -11,7 +11,7 @@ body {
   align-items: center;
   height: 100vh;
   background-color: #f0f2f5;
-  background-image: url('../../Assets/Icons/bg-image.jpg');
+  background-image: url('../../Assets/Icons/login-image.jpg');
   background-size: cover;
   background-position: center;
   width: 100vw;
@@ -19,7 +19,7 @@ body {
 
 .auth-box {
   width: 100%;
-  max-width: 420px;
+  max-width: 500px;
   background: #ffffff;
   padding: 30px;
   border-radius: 12px;
@@ -31,11 +31,18 @@ body {
 }
 
 .auth-title {
-  font-size: 28px;
-  margin-bottom: 24px;
+  font-size: 32px; 
+  margin-bottom: 16px; 
   text-align: center;
-  color: #333;
+  color: #00ca00; 
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px; 
+  line-height: 1.2; 
+  border-bottom: 2px solid #ddd;
+  padding-bottom: 10px; 
 }
+
 
 .auth-form {
   width: 100%;
@@ -84,7 +91,7 @@ body {
 
 .auth-footer p {
   margin-bottom: 12px;
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .auth-google-button {
@@ -119,7 +126,7 @@ body {
   border: none;
   color: #00ca00;
   cursor: pointer;
-  font-size: 16px;
+  font-size: 20px;
   padding: 0;
   text-decoration: underline;
   transition: color 0.3s ease;
