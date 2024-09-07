@@ -81,6 +81,13 @@ const NavBar = () => {
           >
             Ride with us
           </Link>
+          <Link 
+            to="/invest" 
+            className={`nav-link ${activeLink === 'invest' ? 'active' : ''}`}
+            onClick={() => setActiveLink('invest')}
+          >
+            Invest
+          </Link>
           {/* Uncomment and add other links as needed */}
         </div>
         <div className="navbar-actions">

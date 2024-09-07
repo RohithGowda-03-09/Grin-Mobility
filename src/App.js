@@ -9,6 +9,7 @@ import RideWithUs from "./Screens/RideWithUs";
 import { LoadScript } from "@react-google-maps/api";
 import Layout from "./Screens/RideWithUs/Components/Layout";
 import Loader from "./Components/Loader";
+import Invest from "./Screens/Invest";
 
 const App = () => {
   const isAuthenticated = !!localStorage.getItem('authToken'); // Check authentication status
@@ -51,6 +52,18 @@ const App = () => {
                   <ProtectedRoute element={RideWithUs} />
                 ) : (
                   <RideWithUs />
+                )}
+              </Layout>
+            }
+          />
+            <Route
+            path="/invest"
+            element={
+              <Layout>
+                {isAuthenticated ? (
+                  <ProtectedRoute element={Invest} />
+                ) : (
+                  <Invest />
                 )}
               </Layout>
             }

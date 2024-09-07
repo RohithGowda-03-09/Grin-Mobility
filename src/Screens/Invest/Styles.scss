@@ -1,0 +1,13 @@
+.invest-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center images horizontally */
+    padding: 20px; /* Add some padding around the container */
+  }
+  
+  .invest-image {
+    max-width: 100%; /* Ensure images are responsive */
+    margin-bottom: 20px; /* Space between images */
+    border-radius: 8px; /* Optional: Add rounded corners to the images */
+  }
+  
